@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="CPU">
+		<CBX_INST_ENTRY INSTANCE_NAME="|CPU|mybusmux:inst|lpm_mux:LPM_MUX_component" CBX_FILE_NAME="mux_9tc.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
