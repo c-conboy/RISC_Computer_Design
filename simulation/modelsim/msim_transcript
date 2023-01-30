@@ -10,20 +10,20 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/and_or.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/and_or.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module and_or
 # 
 # Top level modules:
 # 	and_or
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
 # 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/ALU_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ALU_tb
 # 
@@ -35,16 +35,20 @@
 # Loading work.ALU_tb
 # Loading work.ALU
 # Loading work.and_or
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v(5): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'selection'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/and_or.v(1).
+# ** Error: (vsim-3033) C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU.v(7): Instantiation of 'Add_rca_32' failed. The design unit was not found.
 # 
-#         Region: /ALU_tb/ALU_instance/and_instance
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v(6): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'selection'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/and_or.v(1).
-# 
-#         Region: /ALU_tb/ALU_instance/or_instance
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 500 ns
+#         Region: /ALU_tb/ALU_instance
+#         Searched libraries:
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/altera
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/220model
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/sgate
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/altera_mf
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/cycloneiii
+#             C:/altera/13.0sp1/elec374/RISC_Computer_Design/simulation/modelsim/rtl_work
+#             C:/altera/13.0sp1/elec374/RISC_Computer_Design/simulation/modelsim/rtl_work
+#             C:/altera/13.0sp1/elec374/RISC_Computer_Design/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./CPU_run_msim_rtl_verilog.do PAUSED at line 13

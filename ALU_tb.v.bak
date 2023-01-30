@@ -16,10 +16,6 @@ module ALU_tb;
 			
 		#200 
 			opcode <= 1;
-		#200
-			input_a <= 12;
-			input_b <= 17;
-			opcode <= 2;
 		end
 	
 endmodule
