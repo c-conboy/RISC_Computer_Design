@@ -14,12 +14,16 @@ module ALU_tb;
 			input_b <= 3;
 			opcode <= 0;
 			
-		#200 
+		#50 
 			opcode <= 1;
-		#200
+		#50
 			input_a <= 12;
 			input_b <= 17;
 			opcode <= 2;
+		#50
+			input_a <= 17;
+			input_b <= 17;
+			opcode <= 3;
 		end
 	
 endmodule

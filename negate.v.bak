@@ -1,0 +1,5 @@
+module negate(output C, input A[31:0]);
+	wire [31:0] xor_result; 
+	xor (xor_result, A, 32'b11111111111111111111111111111111);
+	Add_rca_32 add_instance(add_carry_out, C, xor_result, 1, 0);
+endmodule
