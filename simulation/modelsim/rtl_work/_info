@@ -20,7 +20,7 @@ n@add_full
 !i10b 1
 !s100 hIooeGBjn31Kf1NO7mDZ01
 !s85 0
-!s108 1675117440.262000
+!s108 1675457449.361000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Add_full.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Add_full.v|
 !s101 -O0
@@ -41,7 +41,7 @@ n@add_half
 !i10b 1
 !s100 8g8:<@P;dP319HG7l9A;22
 !s85 0
-!s108 1675117440.206000
+!s108 1675457449.283000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Add_half.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Add_half.v|
 !s101 -O0
@@ -62,7 +62,7 @@ n@add_rca_16
 !i10b 1
 !s100 J3;PBnB6_4V7;J]oaH@Z>0
 !s85 0
-!s108 1675117440.363000
+!s108 1675457449.470000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_16.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_16.v|
 !s101 -O0
@@ -83,7 +83,7 @@ n@add_rca_32
 !i10b 1
 !s100 U2^@2lS;j95>ZkmH:4P[20
 !s85 0
-!s108 1675117440.413000
+!s108 1675457449.524000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_32.v|
 !s101 -O0
@@ -104,15 +104,15 @@ n@add_rca_4
 !i10b 1
 !s100 8cA=[EWRC5cOQeBC@4G<l2
 !s85 0
-!s108 1675117440.315000
+!s108 1675457449.416000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_4.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_4.v|
 !s101 -O0
 vALU
-IORlGYC7L>2mFH4BRCdZYc2
+IiKE@`NfMekP0OBmOTk;bS1
 VWWmLhFi^eeDQ]`C?WafZj0
 R1
-w1675114736
+w1675457426
 8C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v
 FC:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v
 L0 1
@@ -123,19 +123,19 @@ R3
 R4
 n@a@l@u
 !i10b 1
-!s100 Bi@zGL^oOcCVnjm;F8WIB3
+!s100 dShV:3Yc@WB3QXC_ID@cg2
 !s85 0
-!s108 1675117440.154000
+!s108 1675457449.231000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v|
 !s101 -O0
 vALU_tb
 !i10b 1
-!s100 Q:CYTCa;56Wm50`X<F=_e1
-IdIb4]2P>Qiz8R4foP8C2Z2
+!s100 C:DoC[mNhJ7hE`Ko5MLkW1
+I:eB222?h4SlYc^EO34QVk0
 VE`_QLbcAmOeKZDFMXUl3B3
 R1
-w1675116663
+w1675457444
 8C:/altera/13.0sp1/ELEC 374/CPUProject/ALU_tb.v
 FC:/altera/13.0sp1/ELEC 374/CPUProject/ALU_tb.v
 L0 2
@@ -143,7 +143,7 @@ R2
 r1
 !s85 0
 31
-!s108 1675117440.521000
+!s108 1675457449.831000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/ALU_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/ALU_tb.v|
 !s101 -O0
@@ -166,15 +166,15 @@ R4
 !i10b 1
 !s100 D]@aSnh?bYCaSlU2@I]Qe3
 !s85 0
-!s108 1675117440.103000
+!s108 1675457449.102000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/and_or.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/and_or.v|
 !s101 -O0
 vnegate
-IHOM=NonO0<jznVlkEgGQV1
+IdR<8HVn:17M5ZkfTG^g6`1
 VUl^IWK1LP@@WY^:hRUY8`1
 R1
-w1675117416
+w1675117481
 8C:/altera/13.0sp1/ELEC 374/CPUProject/negate.v
 FC:/altera/13.0sp1/ELEC 374/CPUProject/negate.v
 L0 1
@@ -184,9 +184,70 @@ r1
 R3
 R4
 !i10b 1
-!s100 6=3GEMEa]A?Rg8lF6^?5`3
+!s100 c?Cb1Hb3^LC=^AZ0j;VQ]0
 !s85 0
-!s108 1675117440.465000
+!s108 1675457449.596000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/negate.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/negate.v|
+!s101 -O0
+vshift_left
+In@F:JVZi@mFe4`b[COW4;0
+VTjId^XK^K?k9LzL7[TaNY1
+R1
+w1675457264
+8C:/altera/13.0sp1/ELEC 374/CPUProject/shift_left.v
+FC:/altera/13.0sp1/ELEC 374/CPUProject/shift_left.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 9@VzmG]F:?>d6A3Xmg4zh0
+!s85 0
+!s108 1675457449.775000
+!s107 C:/altera/13.0sp1/ELEC 374/CPUProject/shift_left.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/shift_left.v|
+!s101 -O0
+vshift_right
+I7hE=39=2z5Rf<7SOEh;O]3
+VO8:je>dGf:>HF0=[V0<TO0
+R1
+w1675455875
+8C:/altera/13.0sp1/ELEC 374/CPUProject/shift_right.v
+FC:/altera/13.0sp1/ELEC 374/CPUProject/shift_right.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 ^2gzz5USdfjm`NR3RTPhM3
+!s85 0
+!s108 1675457449.721000
+!s107 C:/altera/13.0sp1/ELEC 374/CPUProject/shift_right.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/shift_right.v|
+!s101 -O0
+vSub_rca_32
+I1KEPfL@b5AX[C69bT1]722
+VCR@c:L05WE^S0iQ7Mb><K0
+R1
+w1675455108
+8C:/altera/13.0sp1/ELEC 374/CPUProject/Sub_rca_32.v
+FC:/altera/13.0sp1/ELEC 374/CPUProject/Sub_rca_32.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@sub_rca_32
+!i10b 1
+!s100 hfOQ:BI<J1NAak_;e@=FK2
+!s85 0
+!s108 1675457449.657000
+!s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Sub_rca_32.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Sub_rca_32.v|
 !s101 -O0
