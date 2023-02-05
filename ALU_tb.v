@@ -36,6 +36,18 @@ module ALU_tb;
 			input_a <= 17;
 			input_b <= 17;
 			opcode <= 6;
+		#50
+			input_a <= 17;
+			input_b <= 17;
+			opcode <= 7;
+		#50
+			input_a <= 17;
+			input_b <= 17;
+			opcode <= 8;
+		#50
+			input_a <= 17;
+			input_b <= 17;
+			opcode <= 9;
 		end
 	
 endmodule

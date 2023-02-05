@@ -1,6 +1,6 @@
 module ALU(input [0:31] A, B, input [4:0] op, output reg[0:31] C);
 
-	wire [31:0] and_result, or_result, add_result, add_carry_out, negate_result, sub_result, sub_carry_out, shift_right_result, shift_left_result; 
+	wire [31:0] and_result, or_result, add_result, add_carry_out, negate_result, sub_result, sub_carry_out, shift_right_result, shift_left_result, ror_result, rol_result, shra_result; 
 	
 	and_or and_instance(A, B, 1, and_result);
 	and_or or_instance(A, B, 0, or_result);
@@ -9,6 +9,9 @@ module ALU(input [0:31] A, B, input [4:0] op, output reg[0:31] C);
 	negate negate_instance(negate_result, A);
 	shift_right shift_right_instance(shift_right_result, A);
 	shift_left shift_left_instance(shift_left_result, A);
+	ror ror_instance(ror_result, A);
+	rol rol_instance(rol_result, A);
+	shra shra_instance(shra_result, A);
 	
 	
 	always @(*) begin 
@@ -20,6 +23,9 @@ module ALU(input [0:31] A, B, input [4:0] op, output reg[0:31] C);
 			4 : C = negate_result;
 			5 : C = shift_right_result;
 			6 : C = shift_left_result;
+			7 : C = ror_result;
+			8 : C = rol_result;
+			9 : C = shra_result;
 			default : C = and_result;
 		endcase
 	end
