@@ -17,40 +17,31 @@ module ALU(input [0:31] A, B, input [4:0] op, output reg[0:63] C);
 	
 	always @(*) begin 
 		case(op)
-			0 : begin
-				 C = {32'b0, or_result};
-				 end
-			1 : begin
-				 C = {32'b0, and_result};
-				 end
-			2 : begin
-				 C = {32'b0, add_result};
-				 end
-			3 : begin
-				 C = {32'b0, sub_result};
-				 end
-			4 : begin
-				 C = {32'b0, negate_result};
-				 end
-			5 : begin
-				 C = {32'b0, shift_right_result};
-				 end
-			6 : begin
-				 C = {32'b0, shift_left_result};
-				 end
-			7 : begin
-				 C = {32'b0, ror_result};
-				 end
-			8 : begin 
-				 C = {32'b0, rol_result};
-				 end
-			9 : begin 
-				 C = {32'b0, shra_result};
-				 end
+			0 : C = sign_extend(or_result);
+			1 : C = sign_extend(and_result);
+			2 : C = sign_extend(add_result);
+			3 : C = sign_extend(sub_result);
+			4 : C = sign_extend(negate_result);
+			5 : C = sign_extend(shift_right_result);
+			6 : C = sign_extend(shift_left_result);
+			7 : C = sign_extend(ror_result);
+			8 : C = sign_extend(rol_result);
+			9 : C = sign_extend(shra_result);
 			10 : C = mult_result;
-			default : C = and_result;
+			default : C = sign_extend(and_result);
 		endcase
 	end
+	
+	function [63:0] sign_extend(input [31:0] original_signal);
+		case(original_signal[31])
+			0 : sign_extend = {32'b0, original_signal};
+			1 : sign_extend = {32'b11111111111111111111111111111111, original_signal};
+		endcase
+	endfunction
 
 endmodule
+
+
+
+
 
