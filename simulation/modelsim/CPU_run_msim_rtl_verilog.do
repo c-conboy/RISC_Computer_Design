@@ -19,6 +19,7 @@ vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_De
 vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/ror.v}
 vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/rol.v}
 vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/shra.v}
+vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/mult.v}
 
 vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU_tb.v}
 

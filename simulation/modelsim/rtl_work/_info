@@ -20,7 +20,7 @@ n@add_full
 !i10b 1
 !s100 IYmFeEb^02EkNBIlFX^e<2
 !s85 0
-!s108 1675631859.173000
+!s108 1675722545.124000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_full.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_full.v|
 !s101 -O0
@@ -41,7 +41,7 @@ n@add_half
 !i10b 1
 !s100 g4QLIDAaGdN3k5T13immE2
 !s85 0
-!s108 1675631859.090000
+!s108 1675722544.877000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_half.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_half.v|
 !s101 -O0
@@ -62,7 +62,7 @@ n@add_rca_16
 !i10b 1
 !s100 >H[Pjk8^gIHnl?N>SQcz43
 !s85 0
-!s108 1675631859.309000
+!s108 1675722545.587000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_16.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_16.v|
 !s101 -O0
@@ -83,7 +83,7 @@ n@add_rca_32
 !i10b 1
 !s100 mjKGzUS5@b:XMegbSU1>L1
 !s85 0
-!s108 1675631859.374000
+!s108 1675722545.813000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_32.v|
 !s101 -O0
@@ -104,15 +104,15 @@ n@add_rca_4
 !i10b 1
 !s100 N`6Gdcj=WV^mP<TmH8YnV2
 !s85 0
-!s108 1675631859.244000
+!s108 1675722545.364000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_4.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_4.v|
 !s101 -O0
 vALU
-I@[?zbGQY:A7mEWC?z^]jB2
-VWWmLhFi^eeDQ]`C?WafZj0
+IbUC_XomF8>BNT[J8Pm:i_0
+VOI>WXA9B2cVammIW^9C3n2
 R1
-w1675631507
+w1675720108
 8C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU.v
 FC:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU.v
 L0 1
@@ -123,19 +123,19 @@ R4
 R5
 n@a@l@u
 !i10b 1
-!s100 N0F5KkR_PEfT2K5`o8NFj3
+!s100 _3<[I7L>8]NIzaEnl?h[O1
 !s85 0
-!s108 1675631859.009000
+!s108 1675722544.636000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU.v|
 !s101 -O0
 vALU_tb
 !i10b 1
-!s100 Da`Q6HOYS<<^^30VUD>^>2
-ICKS^h8A@I_I=1^aP4h1V51
+!s100 ^g:gf62D3N9K:`5FD<=m@3
+Ig1aD0?1Y>RGV[ZL;M@Mog2
 VE`_QLbcAmOeKZDFMXUl3B3
 R1
-w1675631820
+w1675719543
 8C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU_tb.v
 FC:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU_tb.v
 L0 2
@@ -143,7 +143,7 @@ R3
 r1
 !s85 0
 31
-!s108 1675631859.887000
+!s108 1675722548.019000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU_tb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU_tb.v|
 !s101 -O0
@@ -166,9 +166,29 @@ R5
 !i10b 1
 !s100 GNiGB^jJ;E0XPQRk;]83D3
 !s85 0
-!s108 1675631858.948000
+!s108 1675722544.399000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/and_or.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/and_or.v|
+!s101 -O0
+vmult
+IIohFF4NTN>X4X=;oGH4Oz2
+VGDdgK^GL5R>LBH`I;n9KM1
+R1
+w1675721757
+8C:/altera/13.0sp1/elec374/RISC_Computer_Design/mult.v
+FC:/altera/13.0sp1/elec374/RISC_Computer_Design/mult.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 LM[I9R<`MCEZUjYloi2K;2
+!s85 0
+!s108 1675722547.772000
+!s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/mult.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/mult.v|
 !s101 -O0
 vnegate
 I<i4zKR6^587>LQVBI]CQX3
@@ -186,7 +206,7 @@ R5
 !i10b 1
 !s100 :5N?l:52nE8Y7E^=M?L3Q2
 !s85 0
-!s108 1675631859.440000
+!s108 1675722546.082000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/negate.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/negate.v|
 !s101 -O0
@@ -206,7 +226,7 @@ R5
 !i10b 1
 !s100 7MDSljNEj_bQTcT7i4M1n3
 !s85 0
-!s108 1675631859.759000
+!s108 1675722547.263000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/rol.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/rol.v|
 !s101 -O0
@@ -226,7 +246,7 @@ R5
 !i10b 1
 !s100 M8IZL>1SU>jc44WnaLj170
 !s85 0
-!s108 1675631859.693000
+!s108 1675722547.068000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/ror.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/ror.v|
 !s101 -O0
@@ -246,7 +266,7 @@ R5
 !i10b 1
 !s100 N1d:[3H0:^CN6C[czUQKA1
 !s85 0
-!s108 1675631859.632000
+!s108 1675722546.823000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/shift_left.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/shift_left.v|
 !s101 -O0
@@ -266,7 +286,7 @@ R5
 !i10b 1
 !s100 :<;BJ0aPD`9C2cWR1<:`60
 !s85 0
-!s108 1675631859.568000
+!s108 1675722546.587000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/shift_right.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/shift_right.v|
 !s101 -O0
@@ -286,7 +306,7 @@ R5
 !i10b 1
 !s100 c@f5fVF]DOE=gJ6AlFjb22
 !s85 0
-!s108 1675631859.824000
+!s108 1675722547.525000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/shra.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/shra.v|
 !s101 -O0
@@ -307,7 +327,7 @@ n@sub_rca_32
 !i10b 1
 !s100 BQ3T]flYcNK1h9f<bLCzI1
 !s85 0
-!s108 1675631859.504000
+!s108 1675722546.335000
 !s107 C:/altera/13.0sp1/elec374/RISC_Computer_Design/Sub_rca_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design|C:/altera/13.0sp1/elec374/RISC_Computer_Design/Sub_rca_32.v|
 !s101 -O0
