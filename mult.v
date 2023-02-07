@@ -35,14 +35,10 @@ module mult(input[31:0]A,B, output[63:0]C);
 			spp[kk] = sign_extend(pp[kk]);
 			for(i=0;i<kk;i=i+1)
 			begin
-				spp[kk] <= spp[kk] << 2;
+				spp[kk] <= spp[kk] <<< 2*kk;
 			end
-		end
-		prod = spp[0];
-		for(kk=1;kk<16;kk=kk+1)
-		begin 
-			prod = prod + spp[kk];
-		end
+		end 
+		prod = spp[0] - spp[1] - spp[2] - spp[3] - spp[4]- spp[5] -spp[6] - spp[7] - spp[8] - spp[9] - spp[10] - spp[11] - spp[12] - spp[13] - spp[14] - spp[15];
 	end 
 
 	assign C = prod;

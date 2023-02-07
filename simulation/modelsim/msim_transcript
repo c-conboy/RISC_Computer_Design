@@ -153,11 +153,16 @@
 # run 500 ns
 add wave -position insertpoint  \
 sim:/ALU_tb/ALU_instance/mult_instance/pp
+
 add wave -position insertpoint  \
 sim:/ALU_tb/ALU_instance/mult_instance/spp
+
 add wave -position insertpoint  \
 sim:/ALU_tb/ALU_instance/mult_instance/prod
-restart
+
+restart -f
+
+run 500ns
 # ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v(5): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'selection'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/and_or.v(1).
 # 
 #         Region: /ALU_tb/ALU_instance/and_instance
@@ -176,7 +181,6 @@ restart
 # ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v(8): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Sub_rca_32.v(1).
 # 
 #         Region: /ALU_tb/ALU_instance/sub_instance
-run 500ns
 do CPU_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -326,3 +330,34 @@ do CPU_run_msim_rtl_verilog.do
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 500 ns
+
+add wave -position insertpoint  \
+sim:/ALU_tb/ALU_instance/mult_instance/pp
+
+add wave -position insertpoint  \
+sim:/ALU_tb/ALU_instance/mult_instance/spp
+
+add wave -position insertpoint  \
+sim:/ALU_tb/ALU_instance/mult_instance/prod
+
+restart -f
+
+run 500ns
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v(5): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'selection'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/and_or.v(1).
+# 
+#         Region: /ALU_tb/ALU_instance/and_instance
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v(6): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'selection'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/and_or.v(1).
+# 
+#         Region: /ALU_tb/ALU_instance/or_instance
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v(7): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_out'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_32.v(1).
+# 
+#         Region: /ALU_tb/ALU_instance/add_instance
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v(7): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_32.v(1).
+# 
+#         Region: /ALU_tb/ALU_instance/add_instance
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v(8): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_out'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Sub_rca_32.v(1).
+# 
+#         Region: /ALU_tb/ALU_instance/sub_instance
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v(8): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'c_in'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Sub_rca_32.v(1).
+# 
+#         Region: /ALU_tb/ALU_instance/sub_instance
