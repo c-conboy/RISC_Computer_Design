@@ -1,13 +1,13 @@
 module mult(input[31:0]A,B, output[63:0]C);
-	reg[32:0]tcM;
 	
+	reg[32:0]tcM;
 	wire[31:0]Q,M;
 	assign Q = A;
 	assign M = B;
-	reg[0:2] cc[0:15];
-	reg[0:63] pp[0:15];
-	reg[0:63] spp[0:15];
-	reg[0:63]prod;
+	reg[2:0] cc[15:0];
+	reg[63:0] pp[15:0];
+	reg[63:0] spp[15:0];
+	reg[63:0]prod;
 	integer kk;
 	integer i;
 	
@@ -35,19 +35,25 @@ module mult(input[31:0]A,B, output[63:0]C);
 			spp[kk] = sign_extend(pp[kk]);
 			for(i=0;i<kk;i=i+1)
 			begin
-				spp[kk] <= spp[kk] <<< 2*kk;
+				spp[kk] = spp[kk] <<< 2;
 			end
 		end 
-		prod = spp[0] - spp[1] - spp[2] - spp[3] - spp[4]- spp[5] -spp[6] - spp[7] - spp[8] - spp[9] - spp[10] - spp[11] - spp[12] - spp[13] - spp[14] - spp[15];
+		
+		prod = spp[0][63:0];
+		for(kk=1;kk<15;kk=kk+1)
+		begin
+			prod = prod + spp[kk][63:0];
+		end
+		
 	end 
 
 	assign C = prod;
 	
-	function [0:63] sign_extend(input [0:63] original_signal);
+	function [63:0] sign_extend(input [63:0] original_signal);
 		begin
 			case(original_signal[32])
-				0 : sign_extend = {32'b0, original_signal[32:63]};
-				1 : sign_extend = {32'b11111111111111111111111111111111, original_signal[32:63]};
+				0 : sign_extend = {32'b0, original_signal[31:0]};
+				1 : sign_extend = {32'b11111111111111111111111111111111, original_signal[31:0]};
 			endcase
 		end
 	endfunction

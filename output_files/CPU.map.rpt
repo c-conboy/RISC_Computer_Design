@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Tue Feb 07 18:08:26 2023
+Thu Feb 09 13:30:32 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,15 +13,16 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "Sub_rca_32:sub_instance"
- 11. Port Connectivity Checks: "Add_rca_32:add_instance"
- 12. Port Connectivity Checks: "and_or:or_instance"
- 13. Port Connectivity Checks: "and_or:and_instance"
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+  8. Logic Cells Representing Combinational Loops
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "Sub_rca_32:sub_instance"
+ 12. Port Connectivity Checks: "Add_rca_32:add_instance"
+ 13. Port Connectivity Checks: "and_or:or_instance"
+ 14. Port Connectivity Checks: "and_or:and_instance"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,13 +48,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Feb 07 18:08:26 2023           ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 09 13:30:32 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CPU                                             ;
 ; Top-level Entity Name              ; ALU                                             ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 590                                             ;
-;     Total combinational functions  ; 590                                             ;
+; Total logic elements               ; 719                                             ;
+;     Total combinational functions  ; 719                                             ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 133                                             ;
@@ -185,34 +186,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
 
 
-+-------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary           ;
-+---------------------------------------------+---------+
-; Resource                                    ; Usage   ;
-+---------------------------------------------+---------+
-; Estimated Total logic elements              ; 590     ;
-;                                             ;         ;
-; Total combinational functions               ; 590     ;
-; Logic element usage by number of LUT inputs ;         ;
-;     -- 4 input functions                    ; 330     ;
-;     -- 3 input functions                    ; 127     ;
-;     -- <=2 input functions                  ; 133     ;
-;                                             ;         ;
-; Logic elements by mode                      ;         ;
-;     -- normal mode                          ; 465     ;
-;     -- arithmetic mode                      ; 125     ;
-;                                             ;         ;
-; Total registers                             ; 0       ;
-;     -- Dedicated logic registers            ; 0       ;
-;     -- I/O registers                        ; 0       ;
-;                                             ;         ;
-; I/O pins                                    ; 133     ;
-; Embedded Multiplier 9-bit elements          ; 0       ;
-; Maximum fan-out node                        ; Mux45~4 ;
-; Maximum fan-out                             ; 75      ;
-; Total fan-out                               ; 2161    ;
-; Average fan-out                             ; 2.52    ;
-+---------------------------------------------+---------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 719         ;
+;                                             ;             ;
+; Total combinational functions               ; 719         ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 365         ;
+;     -- 3 input functions                    ; 218         ;
+;     -- <=2 input functions                  ; 136         ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 501         ;
+;     -- arithmetic mode                      ; 218         ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 133         ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+; Maximum fan-out node                        ; A[30]~input ;
+; Maximum fan-out                             ; 80          ;
+; Total fan-out                               ; 2580        ;
+; Average fan-out                             ; 2.62        ;
++---------------------------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -220,10 +221,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Library Name ;
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
-; |ALU                         ; 590 (228)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 133  ; 0            ; |ALU                                                                            ; work         ;
-;    |Add_rca_32:add_instance| ; 29 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance                                                    ; work         ;
-;       |Add_rca_16:M1|        ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1                                      ; work         ;
-;          |Add_rca_4:M1|      ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1                         ; work         ;
+; |ALU                         ; 719 (257)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 133  ; 0            ; |ALU                                                                            ; work         ;
+;    |Add_rca_32:add_instance| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance                                                    ; work         ;
+;       |Add_rca_16:M1|        ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1                                      ; work         ;
+;          |Add_rca_4:M1|      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1                         ; work         ;
+;             |Add_full:M1|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1             ; work         ;
+;                |Add_half:M1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M1 ; work         ;
 ;             |Add_full:M2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2             ; work         ;
 ;             |Add_full:M3|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3             ; work         ;
 ;             |Add_full:M4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4             ; work         ;
@@ -263,17 +266,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |Add_full:M2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2             ; work         ;
 ;    |Sub_rca_32:sub_instance| ; 77 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance                                                    ; work         ;
 ;       |Add_rca_16:M1|        ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1                                      ; work         ;
-;          |Add_rca_4:M1|      ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1                         ; work         ;
+;          |Add_rca_4:M1|      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1                         ; work         ;
 ;             |Add_full:M2|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M2 ; work         ;
 ;             |Add_full:M3|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3             ; work         ;
-;             |Add_full:M4|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4             ; work         ;
+;             |Add_full:M4|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M2 ; work         ;
-;          |Add_rca_4:M2|      ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2                         ; work         ;
-;             |Add_full:M1|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1             ; work         ;
-;             |Add_full:M2|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2             ; work         ;
+;          |Add_rca_4:M2|      ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2                         ; work         ;
+;             |Add_full:M1|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1             ; work         ;
+;             |Add_full:M2|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M2 ; work         ;
-;             |Add_full:M3|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3             ; work         ;
+;             |Add_full:M3|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3             ; work         ;
 ;             |Add_full:M4|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M2 ; work         ;
 ;          |Add_rca_4:M3|      ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3                         ; work         ;
@@ -317,10 +320,84 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |Add_full:M2|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M2 ; work         ;
 ;    |and_or:and_instance|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|and_or:and_instance                                                        ; work         ;
-;    |mult:mult_instance|      ; 223 (223)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|mult:mult_instance                                                         ; work         ;
+;    |mult:mult_instance|      ; 322 (322)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|mult:mult_instance                                                         ; work         ;
 ;    |negate:negate_instance|  ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|negate:negate_instance                                                     ; work         ;
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                ;
++--------------------------------------------------------+----+
+; Logic Cell Name                                        ;    ;
++--------------------------------------------------------+----+
+; mult:mult_instance|C[0]                                ;    ;
+; mult:mult_instance|C[1]                                ;    ;
+; mult:mult_instance|C[2]                                ;    ;
+; mult:mult_instance|C[3]                                ;    ;
+; mult:mult_instance|C[4]                                ;    ;
+; mult:mult_instance|C[5]                                ;    ;
+; mult:mult_instance|C[6]                                ;    ;
+; mult:mult_instance|C[7]                                ;    ;
+; mult:mult_instance|C[8]                                ;    ;
+; mult:mult_instance|C[9]                                ;    ;
+; mult:mult_instance|C[10]                               ;    ;
+; mult:mult_instance|C[11]                               ;    ;
+; mult:mult_instance|C[12]                               ;    ;
+; mult:mult_instance|C[13]                               ;    ;
+; mult:mult_instance|C[14]                               ;    ;
+; mult:mult_instance|C[15]                               ;    ;
+; mult:mult_instance|C[16]                               ;    ;
+; mult:mult_instance|C[17]                               ;    ;
+; mult:mult_instance|C[18]                               ;    ;
+; mult:mult_instance|C[19]                               ;    ;
+; mult:mult_instance|C[20]                               ;    ;
+; mult:mult_instance|C[21]                               ;    ;
+; mult:mult_instance|C[22]                               ;    ;
+; mult:mult_instance|C[23]                               ;    ;
+; mult:mult_instance|C[24]                               ;    ;
+; mult:mult_instance|C[25]                               ;    ;
+; mult:mult_instance|C[26]                               ;    ;
+; mult:mult_instance|C[27]                               ;    ;
+; mult:mult_instance|C[28]                               ;    ;
+; mult:mult_instance|C[29]                               ;    ;
+; mult:mult_instance|C[30]                               ;    ;
+; mult:mult_instance|C[31]                               ;    ;
+; mult:mult_instance|C[32]                               ;    ;
+; mult:mult_instance|C[33]                               ;    ;
+; mult:mult_instance|C[34]                               ;    ;
+; mult:mult_instance|C[35]                               ;    ;
+; mult:mult_instance|C[36]                               ;    ;
+; mult:mult_instance|C[37]                               ;    ;
+; mult:mult_instance|C[38]                               ;    ;
+; mult:mult_instance|C[39]                               ;    ;
+; mult:mult_instance|C[40]                               ;    ;
+; mult:mult_instance|C[41]                               ;    ;
+; mult:mult_instance|C[42]                               ;    ;
+; mult:mult_instance|C[43]                               ;    ;
+; mult:mult_instance|C[44]                               ;    ;
+; mult:mult_instance|C[45]                               ;    ;
+; mult:mult_instance|C[46]                               ;    ;
+; mult:mult_instance|C[47]                               ;    ;
+; mult:mult_instance|C[48]                               ;    ;
+; mult:mult_instance|C[49]                               ;    ;
+; mult:mult_instance|C[50]                               ;    ;
+; mult:mult_instance|C[51]                               ;    ;
+; mult:mult_instance|C[52]                               ;    ;
+; mult:mult_instance|C[53]                               ;    ;
+; mult:mult_instance|C[54]                               ;    ;
+; mult:mult_instance|C[55]                               ;    ;
+; mult:mult_instance|C[56]                               ;    ;
+; mult:mult_instance|C[57]                               ;    ;
+; mult:mult_instance|C[58]                               ;    ;
+; mult:mult_instance|C[59]                               ;    ;
+; mult:mult_instance|C[60]                               ;    ;
+; mult:mult_instance|C[61]                               ;    ;
+; mult:mult_instance|C[62]                               ;    ;
+; mult:mult_instance|C[63]                               ;    ;
+; Number of logic cells representing combinational loops ; 64 ;
++--------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -343,10 +420,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |ALU|mult:mult_instance|Mux27 ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |ALU|Mux31                    ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 93 LEs               ; 31 LEs                 ; No         ; |ALU|mult:mult_instance|Mux54 ;
-; 20:1               ; 30 bits   ; 390 LEs       ; 150 LEs              ; 240 LEs                ; No         ; |ALU|Mux45                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ALU|mult:mult_instance|Mux0  ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |ALU|mult:mult_instance|Mux24 ;
+; 6:1                ; 33 bits   ; 132 LEs       ; 66 LEs               ; 66 LEs                 ; No         ; |ALU|Mux2                     ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 93 LEs               ; 31 LEs                 ; No         ; |ALU|mult:mult_instance|Mux34 ;
+; 20:1               ; 30 bits   ; 390 LEs       ; 150 LEs              ; 240 LEs                ; No         ; |ALU|Mux62                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 
 
@@ -399,7 +477,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -409,7 +487,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Feb 07 18:08:22 2023
+    Info: Processing started: Thu Feb 09 13:30:29 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Warning (12019): Can't analyze file -- file Register32.v is missing
@@ -473,20 +551,21 @@ Info (12128): Elaborating entity "mult" for hierarchy "mult:mult_instance"
 Warning (10199): Verilog HDL Case Statement warning at mult.v(27): case item expression never matches the case expression
 Warning (10199): Verilog HDL Case Statement warning at mult.v(29): case item expression never matches the case expression
 Warning (10199): Verilog HDL Case Statement warning at mult.v(31): case item expression never matches the case expression
+Warning (10235): Verilog HDL Always Construct warning at mult.v(44): variable "prod" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/ELEC 374/CPUProject/output_files/CPU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 723 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 852 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 69 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 590 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4583 megabytes
-    Info: Processing ended: Tue Feb 07 18:08:26 2023
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:05
+    Info (21061): Implemented 719 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4600 megabytes
+    Info: Processing ended: Thu Feb 09 13:30:32 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+
