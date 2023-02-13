@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Mon Feb 13 14:08:36 2023
+Mon Feb 13 15:00:58 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,14 +15,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "div:div_instance"
- 11. Port Connectivity Checks: "Sub_rca_32:sub_instance"
- 12. Port Connectivity Checks: "Add_rca_32:add_instance"
- 13. Port Connectivity Checks: "and_or:or_instance"
- 14. Port Connectivity Checks: "and_or:and_instance"
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
+ 10. Port Connectivity Checks: "Sub_rca_32:sub_instance"
+ 11. Port Connectivity Checks: "Add_rca_32:add_instance"
+ 12. Port Connectivity Checks: "and_or:or_instance"
+ 13. Port Connectivity Checks: "and_or:and_instance"
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,13 +47,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Feb 13 14:08:36 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 13 15:00:58 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CPU                                             ;
 ; Top-level Entity Name              ; ALU                                             ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 2,650                                           ;
-;     Total combinational functions  ; 2,650                                           ;
+; Total logic elements               ; 2,730                                           ;
+;     Total combinational functions  ; 2,730                                           ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 133                                             ;
@@ -192,17 +191,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 2,650       ;
+; Estimated Total logic elements              ; 2,730       ;
 ;                                             ;             ;
-; Total combinational functions               ; 2650        ;
+; Total combinational functions               ; 2730        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 1319        ;
-;     -- 3 input functions                    ; 611         ;
-;     -- <=2 input functions                  ; 720         ;
+;     -- 4 input functions                    ; 1332        ;
+;     -- 3 input functions                    ; 706         ;
+;     -- <=2 input functions                  ; 692         ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 2002        ;
-;     -- arithmetic mode                      ; 648         ;
+;     -- normal mode                          ; 2049        ;
+;     -- arithmetic mode                      ; 681         ;
 ;                                             ;             ;
 ; Total registers                             ; 0           ;
 ;     -- Dedicated logic registers            ; 0           ;
@@ -211,9 +210,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                                    ; 133         ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ; Maximum fan-out node                        ; A[30]~input ;
-; Maximum fan-out                             ; 82          ;
-; Total fan-out                               ; 8709        ;
-; Average fan-out                             ; 2.99        ;
+; Maximum fan-out                             ; 81          ;
+; Total fan-out                               ; 9020        ;
+; Average fan-out                             ; 3.01        ;
 +---------------------------------------------+-------------+
 
 
@@ -222,118 +221,113 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                             ; Library Name ;
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
-; |ALU                         ; 2650 (381)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 133  ; 0            ; |ALU                                                                            ; work         ;
-;    |Add_rca_32:add_instance| ; 41 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance                                                    ; work         ;
-;       |Add_rca_16:M1|        ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1                                      ; work         ;
-;          |Add_rca_4:M1|      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1                         ; work         ;
+; |ALU                         ; 2730 (386)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 133  ; 0            ; |ALU                                                                            ; work         ;
+;    |Add_rca_32:add_instance| ; 38 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance                                                    ; work         ;
+;       |Add_rca_16:M1|        ; 21 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1                                      ; work         ;
+;          |Add_rca_4:M1|      ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1                         ; work         ;
 ;             |Add_full:M1|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1             ; work         ;
 ;                |Add_half:M1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M1 ; work         ;
 ;             |Add_full:M2|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M2 ; work         ;
 ;             |Add_full:M3|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3             ; work         ;
-;          |Add_rca_4:M2|      ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2                         ; work         ;
-;             |Add_full:M1|    ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1             ; work         ;
-;                |Add_half:M2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M2 ; work         ;
-;             |Add_full:M2|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2             ; work         ;
-;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M2 ; work         ;
+;             |Add_full:M4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4             ; work         ;
+;          |Add_rca_4:M2|      ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2                         ; work         ;
+;             |Add_full:M1|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1             ; work         ;
+;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M2 ; work         ;
+;             |Add_full:M2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2             ; work         ;
 ;             |Add_full:M3|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3             ; work         ;
-;          |Add_rca_4:M3|      ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3                         ; work         ;
+;          |Add_rca_4:M3|      ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3                         ; work         ;
 ;             |Add_full:M1|    ; 4 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1             ; work         ;
 ;                |Add_half:M2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M2 ; work         ;
 ;             |Add_full:M2|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M2 ; work         ;
-;             |Add_full:M3|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3             ; work         ;
 ;             |Add_full:M4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4             ; work         ;
-;          |Add_rca_4:M4|      ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4                         ; work         ;
-;             |Add_full:M1|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1             ; work         ;
-;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M2 ; work         ;
-;             |Add_full:M2|    ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2             ; work         ;
-;                |Add_half:M2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M2 ; work         ;
-;             |Add_full:M3|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3             ; work         ;
-;             |Add_full:M4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4             ; work         ;
-;       |Add_rca_16:M2|        ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2                                      ; work         ;
+;          |Add_rca_4:M4|      ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4                         ; work         ;
+;             |Add_full:M1|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1             ; work         ;
+;             |Add_full:M2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2             ; work         ;
+;             |Add_full:M4|    ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4             ; work         ;
+;                |Add_half:M2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M2 ; work         ;
+;       |Add_rca_16:M2|        ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2                                      ; work         ;
 ;          |Add_rca_4:M1|      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1                         ; work         ;
-;             |Add_full:M1|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1             ; work         ;
-;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M2 ; work         ;
+;             |Add_full:M1|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1             ; work         ;
 ;             |Add_full:M2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2             ; work         ;
 ;             |Add_full:M3|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3             ; work         ;
-;          |Add_rca_4:M2|      ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2                         ; work         ;
+;          |Add_rca_4:M2|      ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2                         ; work         ;
 ;             |Add_full:M1|    ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1             ; work         ;
 ;                |Add_half:M2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M2 ; work         ;
 ;             |Add_full:M2|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M2 ; work         ;
-;             |Add_full:M3|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3             ; work         ;
-;             |Add_full:M4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4             ; work         ;
+;             |Add_full:M4|    ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4             ; work         ;
+;                |Add_half:M2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M2 ; work         ;
 ;          |Add_rca_4:M3|      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3                         ; work         ;
-;             |Add_full:M1|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1             ; work         ;
-;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M2 ; work         ;
+;             |Add_full:M1|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1             ; work         ;
 ;             |Add_full:M2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2             ; work         ;
 ;             |Add_full:M3|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3             ; work         ;
 ;             |Add_full:M4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4             ; work         ;
 ;          |Add_rca_4:M4|      ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4                         ; work         ;
 ;             |Add_full:M1|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1             ; work         ;
-;    |Sub_rca_32:sub_instance| ; 89 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance                                                    ; work         ;
-;       |Add_rca_16:M1|        ; 29 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1                                      ; work         ;
+;    |Sub_rca_32:sub_instance| ; 87 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance                                                    ; work         ;
+;       |Add_rca_16:M1|        ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1                                      ; work         ;
 ;          |Add_rca_4:M1|      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1                         ; work         ;
 ;             |Add_full:M2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2             ; work         ;
 ;             |Add_full:M3|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M2 ; work         ;
 ;             |Add_full:M4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4             ; work         ;
-;          |Add_rca_4:M2|      ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2                         ; work         ;
-;             |Add_full:M1|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1             ; work         ;
+;          |Add_rca_4:M2|      ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2                         ; work         ;
+;             |Add_full:M1|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M2 ; work         ;
-;             |Add_full:M2|    ; 5 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2             ; work         ;
-;                |Add_half:M2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M2 ; work         ;
+;             |Add_full:M2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2             ; work         ;
 ;             |Add_full:M3|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M2 ; work         ;
 ;             |Add_full:M4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4             ; work         ;
-;          |Add_rca_4:M3|      ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3                         ; work         ;
+;          |Add_rca_4:M3|      ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3                         ; work         ;
 ;             |Add_full:M1|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M2 ; work         ;
 ;             |Add_full:M2|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M2 ; work         ;
 ;             |Add_full:M3|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M2 ; work         ;
-;          |Add_rca_4:M4|      ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4                         ; work         ;
-;             |Add_full:M1|    ; 5 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1             ; work         ;
-;                |Add_half:M2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M2 ; work         ;
-;             |Add_full:M2|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2             ; work         ;
-;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M2 ; work         ;
-;             |Add_full:M3|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3             ; work         ;
-;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M2 ; work         ;
-;             |Add_full:M4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4             ; work         ;
-;       |Add_rca_16:M2|        ; 28 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2                                      ; work         ;
+;             |Add_full:M4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4             ; work         ;
+;          |Add_rca_4:M4|      ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4                         ; work         ;
+;             |Add_full:M1|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1             ; work         ;
+;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M2 ; work         ;
+;             |Add_full:M3|    ; 5 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3             ; work         ;
+;                |Add_half:M2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M2 ; work         ;
+;             |Add_full:M4|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4             ; work         ;
+;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M2 ; work         ;
+;       |Add_rca_16:M2|        ; 29 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2                                      ; work         ;
 ;          |Add_rca_4:M1|      ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1                         ; work         ;
-;             |Add_full:M1|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1             ; work         ;
+;             |Add_full:M1|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M2 ; work         ;
-;             |Add_full:M2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2             ; work         ;
-;             |Add_full:M3|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3             ; work         ;
+;             |Add_full:M2|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2             ; work         ;
+;             |Add_full:M3|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M2 ; work         ;
-;             |Add_full:M4|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4             ; work         ;
-;          |Add_rca_4:M2|      ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2                         ; work         ;
+;             |Add_full:M4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4             ; work         ;
+;          |Add_rca_4:M2|      ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2                         ; work         ;
 ;             |Add_full:M1|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M2 ; work         ;
-;             |Add_full:M2|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2             ; work         ;
+;             |Add_full:M2|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M2 ; work         ;
-;             |Add_full:M3|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3             ; work         ;
-;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M2 ; work         ;
-;             |Add_full:M4|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4             ; work         ;
-;          |Add_rca_4:M3|      ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3                         ; work         ;
-;             |Add_full:M1|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1             ; work         ;
+;             |Add_full:M3|    ; 5 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3             ; work         ;
+;                |Add_half:M2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M2 ; work         ;
+;             |Add_full:M4|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4             ; work         ;
+;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M2 ; work         ;
+;          |Add_rca_4:M3|      ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3                         ; work         ;
+;             |Add_full:M1|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M2 ; work         ;
-;             |Add_full:M3|    ; 5 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3             ; work         ;
+;             |Add_full:M2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2             ; work         ;
+;             |Add_full:M3|    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3             ; work         ;
 ;                |Add_half:M2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M2 ; work         ;
-;             |Add_full:M4|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4             ; work         ;
-;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M2 ; work         ;
-;          |Add_rca_4:M4|      ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4                         ; work         ;
-;             |Add_full:M1|    ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1             ; work         ;
+;             |Add_full:M4|    ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4             ; work         ;
+;          |Add_rca_4:M4|      ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4                         ; work         ;
+;             |Add_full:M1|    ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1             ; work         ;
 ;                |Add_half:M2| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M2 ; work         ;
 ;             |Add_full:M2|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2             ; work         ;
 ;             |Add_full:M3|    ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3             ; work         ;
 ;                |Add_half:M2| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M2 ; work         ;
 ;    |and_or:and_instance|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|and_or:and_instance                                                        ; work         ;
-;    |and_or:or_instance|      ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|and_or:or_instance                                                         ; work         ;
-;    |div:div_instance|        ; 126 (126)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|div:div_instance                                                           ; work         ;
+;    |and_or:or_instance|      ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|and_or:or_instance                                                         ; work         ;
+;    |div:div_instance|        ; 209 (209)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|div:div_instance                                                           ; work         ;
 ;    |mult:mult_instance|      ; 1965 (1965)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|mult:mult_instance                                                         ; work         ;
 ;    |negate:negate_instance|  ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|negate:negate_instance                                                     ; work         ;
 +------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------+--------------+
@@ -360,34 +354,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ALU|mult:mult_instance|Mux0   ;
-; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; No         ; |ALU|mult:mult_instance|Mux24  ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux436 ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux373 ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux327 ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux232 ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux180 ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux113 ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux45  ;
-; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux480 ;
-; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux427 ;
-; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux344 ;
-; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux277 ;
-; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux218 ;
-; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux160 ;
-; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux75  ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |ALU|Mux3                      ;
-; 21:1               ; 29 bits   ; 406 LEs       ; 174 LEs              ; 232 LEs                ; No         ; |ALU|Mux48                     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ALU|mult:mult_instance|Mux1   ;
+; 4:1                ; 29 bits   ; 58 LEs        ; 58 LEs               ; 0 LEs                  ; No         ; |ALU|mult:mult_instance|Mux28  ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux434 ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux369 ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux306 ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux249 ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux183 ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux110 ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |ALU|mult:mult_instance|Mux51  ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux468 ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux398 ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux336 ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux276 ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux229 ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux158 ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 90 LEs               ; 60 LEs                 ; No         ; |ALU|mult:mult_instance|Mux90  ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |ALU|Mux30                     ;
+; 21:1               ; 29 bits   ; 406 LEs       ; 174 LEs              ; 232 LEs                ; No         ; |ALU|Mux58                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "div:div_instance"                                                                                                        ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                  ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; C    ; Output ; Warning  ; Output or bidir port (65 bits) is wider than the port expression (64 bits) it drives; bit(s) "C[64..64]" have no fanouts ;
-+------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -449,7 +434,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Feb 13 14:08:22 2023
+    Info: Processing started: Mon Feb 13 15:00:45 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Warning (12019): Can't analyze file -- file Register32.v is missing
@@ -516,19 +501,19 @@ Warning (10199): Verilog HDL Case Statement warning at mult.v(27): case item exp
 Warning (10199): Verilog HDL Case Statement warning at mult.v(29): case item expression never matches the case expression
 Warning (10199): Verilog HDL Case Statement warning at mult.v(31): case item expression never matches the case expression
 Info (12128): Elaborating entity "div" for hierarchy "div:div_instance"
-Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/elec374/RISC_Computer_Design/output_files/CPU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2783 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2863 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 69 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 2650 logic cells
+    Info (21061): Implemented 2730 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 4598 megabytes
-    Info: Processing ended: Mon Feb 13 14:08:36 2023
-    Info: Elapsed time: 00:00:14
+    Info: Processing ended: Mon Feb 13 15:00:58 2023
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:13
 
 

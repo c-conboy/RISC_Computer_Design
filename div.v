@@ -28,10 +28,10 @@ module div(input[31:0]A,B, output[63:0]C);
 		end
 		
 		AQ[64:0] = {33'b0, Qp};
-		
+		AQs = AQ;
 		for(i=0; i<32; i=i+1)
 		begin
-			AQs = shift_left(AQ);
+			AQs = shift_left(AQs);
 			if(AQs[64] == 0)
 			begin
 				AQs[64:32] = AQs[64:32]+(~Mp+1);
