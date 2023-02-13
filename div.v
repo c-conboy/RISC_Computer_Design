@@ -13,10 +13,12 @@ module div(input[31:0]A,B, output[64:0]C);
 		
 		Qp = Q;
 		Mp = M;
+		Qflag = 0;
+		Mflag = 0;
 		if(Q[31] == 1)
 		begin
 			Qflag = 1;
-			Qp = ~Q[31:0]+1;
+			Qp = ~Q+1;
 		end
 		
 		if(M[31] == 1)
@@ -32,12 +34,12 @@ module div(input[31:0]A,B, output[64:0]C);
 			AQs = shift_left(AQ);
 			if(AQs[64] == 0)
 			begin
-				AQs[64:32] = AQs|~Mp;
+				AQs[64:32] = AQs[64:32]+~Mp;
 			end
 			
 			else 
 			begin
-				AQs[64:32] = AQs|Mp;
+				AQs[64:32] = AQs[64:32]+Mp;
 			end
 			
 			if(AQs[64]==1)
@@ -51,6 +53,10 @@ module div(input[31:0]A,B, output[64:0]C);
 			end
 		end
 		
+		if(AQs[64] == 1)
+		begin
+		AQs[64:32] = AQs[64:32] + Mp;
+		end
 		
 		if(Mflag == 1)
 		begin

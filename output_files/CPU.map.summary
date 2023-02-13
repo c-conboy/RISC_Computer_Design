@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Feb 13 12:51:00 2023
+Analysis & Synthesis Status : Successful - Mon Feb 13 14:08:36 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : CPU
 Top-level Entity Name : ALU
 Family : Cyclone III
-Total logic elements : 2,594
-    Total combinational functions : 2,594
+Total logic elements : 2,650
+    Total combinational functions : 2,650
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 133
