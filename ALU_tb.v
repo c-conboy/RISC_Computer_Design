@@ -69,8 +69,8 @@ module ALU_tb;
 			input_b <= 24;
 			opcode <= 10;
 		#25
-			input_a <= 8;
-			input_b <= 3;
+			input_a <= -8;
+			input_b <= -3;
 			opcode <= 11;
 		end
 	
