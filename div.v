@@ -1,4 +1,4 @@
-module div(input[31:0]A,B, output[64:0]C);
+module div(input[31:0]A,B, output[63:0]C);
 	wire[31:0]Q,M;
 	reg[31:0]Qp, Mp;
 	assign Q = A;
@@ -34,7 +34,7 @@ module div(input[31:0]A,B, output[64:0]C);
 			AQs = shift_left(AQ);
 			if(AQs[64] == 0)
 			begin
-				AQs[64:32] = AQs[64:32]+~Mp;
+				AQs[64:32] = AQs[64:32]+(~Mp+1);
 			end
 			
 			else 
@@ -70,7 +70,7 @@ module div(input[31:0]A,B, output[64:0]C);
 		
 			
 	end
-	assign C = AQs;
+	assign C = AQs[63:0];
 	function [64:0] shift_left(input [64:0] Z);
 		begin
 		shift_left[0] = 0;
