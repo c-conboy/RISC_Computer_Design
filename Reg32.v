@@ -5,7 +5,7 @@ module Reg32(D, Q, clk, clr, e);
  input e; 
  output reg [31:0] Q; 
  
- always @(posedge clk)
+ always @(*)
 	if (clr) begin
 		Q <= 0; 
 	end else if(e) begin 
