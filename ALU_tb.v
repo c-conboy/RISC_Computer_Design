@@ -26,11 +26,11 @@ module ALU_tb;
 			opcode <= 3;
 		#25
 			input_a <= 17;
-			input_b <= 17;
+			input_b <= 4;
 			opcode <= 4;
 		#25
 			input_a <= 17;
-			input_b <= 17;
+			input_b <= 3;
 			opcode <= 5;
 		#25
 			input_a <= 17;
@@ -38,15 +38,15 @@ module ALU_tb;
 			opcode <= 6;
 		#25
 			input_a <= 17;
-			input_b <= 17;
+			input_b <= 5;
 			opcode <= 7;
 		#25
 			input_a <= 17;
-			input_b <= 17;
+			input_b <= 5;
 			opcode <= 8;
 		#25
-			input_a <= 17;
-			input_b <= 17;
+			input_a <= -17;
+			input_b <= 3;
 			opcode <= 9;
 		#25
 			input_a <= 17;

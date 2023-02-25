@@ -5,7 +5,7 @@ module Reg64(D, Q, clk, clr, e);
  input e; 
  output reg [63:0] Q; 
  
- always @(posedge clk)
+ always @(*)
 	if (clr) begin
 		Q <= 0; 
 	end else if(e) begin 

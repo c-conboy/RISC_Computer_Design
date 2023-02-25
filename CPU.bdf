@@ -1060,7 +1060,7 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1664 2152 1808 2232)
+	(rect 1656 2152 1800 2232)
 	(text "MDMux" (rect 51 0 104 16)(font "Arial" (font_size 10)))
 	(text "inst10" (rect 8 64 37 76)(font "Arial" ))
 	(port
@@ -1447,11 +1447,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 1912 2200)
-	(pt 1808 2200)
-	(bus)
-)
-(connector
 	(text "Zin[63:0]" (rect 176 2368 219 2380)(font "Arial" ))
 	(pt 208 2384)
 	(pt 176 2384)
@@ -1805,12 +1800,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "Zout[31:0]" (rect 1114 1800 1164 1812)(font "Arial" ))
-	(pt 1208 1816)
-	(pt 1104 1816)
-	(bus)
-)
-(connector
 	(pt 128 80)
 	(pt 120 80)
 	(bus)
@@ -1954,6 +1943,17 @@ applicable agreement for further details.
 	(text "BusMuxOut[31:0]" (rect 42 1744 126 1756)(font "Arial" ))
 	(pt 120 1760)
 	(pt 32 1760)
+	(bus)
+)
+(connector
+	(text "Zout[31:0]" (rect 1114 1800 1164 1812)(font "Arial" ))
+	(pt 1112 1816)
+	(pt 1208 1816)
+	(bus)
+)
+(connector
+	(pt 1800 2200)
+	(pt 1912 2200)
 	(bus)
 )
 (junction (pt 1208 1896))

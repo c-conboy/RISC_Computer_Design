@@ -1,5 +1,5 @@
 module bus_encoder(output reg [4:0] Code, input[31:0] Data);
-	always @(Data)
+	always @(Data or Code)
 	begin
 		if(Data == 32'b00000000000000000000000000000001)Code=0; else
 		if(Data == 32'b00000000000000000000000000000010)Code=1; else

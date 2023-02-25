@@ -1,17 +1,19 @@
 module ALU(input [0:31] A, B, input [4:0] op, output reg[0:63] C);
 
-	wire [31:0] and_result, or_result, add_result, add_carry_out, negate_result, sub_result, sub_carry_out, shift_right_result, shift_left_result, ror_result, rol_result, shra_result; 
+	wire [31:0] and_result, or_result, add_result, inc_result,  negate_result, sub_result, shift_right_result, shift_left_result, ror_result, rol_result, shra_result;
+	wire add_carry_out, inc_carry_out, sub_carry_out;
 	wire [63:0] mult_result, div_result;
-	and_or and_instance(A, B, 1, and_result);
-	and_or or_instance(A, B, 0, or_result);
-	Add_rca_32 add_instance(add_carry_out, add_result, A, B, 0);
-	Sub_rca_32 sub_instance(sub_carry_out, sub_result, A, B, 0);
-	negate negate_instance(negate_result, A);
-	shift_right shift_right_instance(shift_right_result, A);
-	shift_left shift_left_instance(shift_left_result, A);
-	ror ror_instance(ror_result, A);
-	rol rol_instance(rol_result, A);
-	shra shra_instance(shra_result, A);
+	and_or and_instance(A, B, 1'b1, and_result);
+	and_or or_instance(A, B, 1'b0, or_result);
+	Add_rca_32 add_instance(add_carry_out, add_result, A, B, 1'b0);
+	Add_rca_32 inc_instance(inc_carry_out, inc_result, 1, B, 1'b0);
+	Sub_rca_32 sub_instance(sub_carry_out, sub_result, A, B, 1'b0);
+	negate negate_instance(negate_result, B);
+	shift_right shift_right_instance(shift_right_result, A, B);
+	shift_left shift_left_instance(shift_left_result, A, B);
+	ror ror_instance(ror_result, A, B);
+	rol rol_instance(rol_result, A, B);
+	shra shra_instance(shra_result, A, B);
 	mult mult_instance(A, B, mult_result);
 	div div_instance(A, B, div_result);
 	
@@ -30,6 +32,8 @@ module ALU(input [0:31] A, B, input [4:0] op, output reg[0:63] C);
 			9 : C = sign_extend(shra_result);
 			10 : C = mult_result;
 			11 : C = div_result;
+			12 : C = inc_result;
+			13 : C = ~B;
 			default : C = sign_extend(and_result);
 		endcase
 	end
