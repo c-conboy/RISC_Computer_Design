@@ -1,7 +1,7 @@
 module Datapath (
 		//INPUTS
 		input clk, clr,
-		input R0in, R0out, HIin, HIout, LOin, LOout, PCin, PCout, IRin, Zin, Zhighout, Zlowout, Yin, MARin, MDRin, MDRout, Read,
+		input R0in, R0out, HIin, HIout, LOin, LOout, PCin, PCout, IRin, Zin, Zhighout, Zlowout, Yin, MARin, MDRin, MDRout, Read, Write,
 		input R1in, R1out, R2in, R2out, R3in, R3out, R4in, R4out, R5in, R5out, R6in, R6out, R7in, R7out, R8in, R8out, R9in, R9out, R10in, R10out, R11in, R11out,R12in, R12out, R13in, R13out, R14in, R14out, R15in, R15out,
 		input [31:0] Mdatain,
 		input [4:0] OpCode
@@ -16,6 +16,8 @@ module Datapath (
 	wire [31:0] BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3, BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7, BusMuxIn_R8, BusMuxIn_R9, BusMuxIn_R10, BusMuxIn_R11, BusMuxIn_R12, BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15; 
 	//For Bus Encoder Mux Connection
 	wire [4:0] Bus_Encoder_Output;
+	//MAR Output to RAM (Address)
+	wire [31:0] MARotp;
 	//Instantiate all the registers
 	Reg32 R0(BusMuxOut, BusMuxIn_R0, clk, clr, R0in);
 	Reg32 R1(BusMuxOut, BusMuxIn_R1, clk, clr, R1in);
@@ -51,4 +53,6 @@ module Datapath (
 	//Instantiate the bus (encoder, multiplexer)
 	bus_encoder Bus_Encoder (Bus_Encoder_Output, {10'b0, MDRout, PCout, Zlowout, Zhighout, LOout, HIout, R15out, R14out, R13out, R12out, R11out, R10out, R9out, R8out, R7out, R6out, R5out, R4out, R3out, R2out, R1out, R0out});
 	bus_multiplexer Bus_Multiplexer (BusMuxOut, BusMuxIn_R0, BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3, BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7, BusMuxIn_R8, BusMuxIn_R9, BusMuxIn_R10, BusMuxIn_R11, BusMuxIn_R12, BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15, BusMuxIn_HI, BusMuxIn_LO, BusMuxIn_Zhigh, BusMuxIn_Zlow, BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_Port, Bus_Encoder_Output);
+	//Memory Chip Interface (RAM)
+	RAM RAM(Read, Write, MARotp[8:0], BusMuxIn_MDR);
 endmodule

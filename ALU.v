@@ -6,7 +6,7 @@ module ALU(input [0:31] A, B, input [4:0] op, output reg[0:63] C);
 	and_or and_instance(A, B, 1'b1, and_result);
 	and_or or_instance(A, B, 1'b0, or_result);
 	Add_rca_32 add_instance(add_carry_out, add_result, A, B, 1'b0);
-	Add_rca_32 inc_instance(inc_carry_out, inc_result, 1, B, 1'b0);
+	Add_rca_32 inc_instance(inc_carry_out, inc_result, B, 1, 1'b0);
 	Sub_rca_32 sub_instance(sub_carry_out, sub_result, A, B, 1'b0);
 	negate negate_instance(negate_result, B);
 	shift_right shift_right_instance(shift_right_result, A, B);

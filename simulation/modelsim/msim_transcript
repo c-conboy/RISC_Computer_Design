@@ -230,6 +230,9 @@ add wave -position insertpoint  \
 sim:/not_datapath_tb/DUT/R1/Q
 
 add wave -position insertpoint  \
+sim:/not_datapath_tb/DUT/R5/Q
+
+add wave -position insertpoint  \
 sim:/not_datapath_tb/DUT/HI/Q
 
 add wave -position insertpoint  \

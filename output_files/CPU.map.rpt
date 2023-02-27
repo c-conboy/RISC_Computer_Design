@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Sat Feb 25 13:11:01 2023
+Mon Feb 27 16:47:48 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -50,7 +50,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 25 13:11:01 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 27 16:47:48 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CPU                                             ;
 ; Top-level Entity Name              ; Datapath                                        ;
@@ -59,7 +59,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 0                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 86                                              ;
+; Total pins                         ; 87                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -192,6 +192,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Datapath.v                       ; yes             ; User Verilog HDL File  ; C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v    ;         ;
 ; MdMuxVHDL.v                      ; yes             ; User Verilog HDL File  ; C:/altera/13.0sp1/ELEC 374/CPUProject/MdMuxVHDL.v   ;         ;
 ; bus_muxVHDL.v                    ; yes             ; User Verilog HDL File  ; C:/altera/13.0sp1/ELEC 374/CPUProject/bus_muxVHDL.v ;         ;
+; RAM.v                            ; yes             ; User Verilog HDL File  ; C:/altera/13.0sp1/ELEC 374/CPUProject/RAM.v         ;         ;
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------+---------+
 
 
@@ -215,11 +216,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 86    ;
+; I/O pins                                    ; 87    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 86    ;
+; Total fan-out                               ; 87    ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -229,7 +230,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |Datapath                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 86   ; 0            ; |Datapath           ; work         ;
+; |Datapath                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 87   ; 0            ; |Datapath           ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -274,8 +275,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; c_out    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; a[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; a[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; b[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; c_in     ; Input  ; Info     ; Stuck at GND                                                                        ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -308,14 +309,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+-------+----------+--------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Reg32:MAR"                                                                                                             ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
-; Q    ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "Q[31..1]" have no fanouts ;
-; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                    ;
-+------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Reg32:MAR"                                                                              ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Q[31..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -343,7 +343,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Feb 25 13:10:59 2023
+    Info: Processing started: Mon Feb 27 16:47:45 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file reg32.v
@@ -423,8 +423,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file rol_dat
     Info (12023): Found entity 1: rol_datapath_tb
 Info (12021): Found 1 design units, including 1 entities, in source file neg_datapath_tb.v
     Info (12023): Found entity 1: neg_datapath_tb
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(42): created implicit net for "IRotp"
-Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(46): created implicit net for "MARotp"
+Info (12021): Found 1 design units, including 1 entities, in source file not_datapath_tb.v
+    Info (12023): Found entity 1: not_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file ram.v
+    Info (12023): Found entity 1: RAM
+Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(44): created implicit net for "IRotp"
 Info (12127): Elaborating entity "Datapath" for the top level hierarchy
 Info (12128): Elaborating entity "Reg32" for hierarchy "Reg32:R0"
 Warning (10240): Verilog HDL Always Construct warning at Reg32.v(9): inferring latch(es) for variable "Q", which holds its previous value in one or more paths through the always construct
@@ -550,11 +553,45 @@ Warning (10199): Verilog HDL Case Statement warning at mult.v(31): case item exp
 Info (12128): Elaborating entity "div" for hierarchy "ALU:ALU|div:div_instance"
 Info (12128): Elaborating entity "bus_encoder" for hierarchy "bus_encoder:Bus_Encoder"
 Info (12128): Elaborating entity "bus_multiplexer" for hierarchy "bus_multiplexer:Bus_Multiplexer"
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM"
+Warning (10240): Verilog HDL Always Construct warning at RAM.v(6): inferring latch(es) for variable "temp_data", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "temp_data[0]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[1]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[2]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[3]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[4]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[5]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[6]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[7]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[8]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[9]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[10]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[11]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[12]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[13]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[14]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[15]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[16]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[17]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[18]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[19]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[20]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[21]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[22]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[23]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[24]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[25]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[26]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[27]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[28]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[29]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[30]" at RAM.v(6)
+Info (10041): Inferred latch for "temp_data[31]" at RAM.v(6)
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/ELEC 374/CPUProject/output_files/CPU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 86 input pin(s) that do not drive logic
+Warning (21074): Design contains 87 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clk"
     Warning (15610): No output dependent on input pin "clr"
     Warning (15610): No output dependent on input pin "R0in"
@@ -574,6 +611,7 @@ Warning (21074): Design contains 86 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "MDRin"
     Warning (15610): No output dependent on input pin "MDRout"
     Warning (15610): No output dependent on input pin "Read"
+    Warning (15610): No output dependent on input pin "Write"
     Warning (15610): No output dependent on input pin "R1in"
     Warning (15610): No output dependent on input pin "R1out"
     Warning (15610): No output dependent on input pin "R2in"
@@ -641,14 +679,14 @@ Warning (21074): Design contains 86 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "OpCode[2]"
     Warning (15610): No output dependent on input pin "OpCode[3]"
     Warning (15610): No output dependent on input pin "OpCode[4]"
-Info (21057): Implemented 86 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 86 input pins
+Info (21057): Implemented 87 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 87 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 99 warnings
-    Info: Peak virtual memory: 4600 megabytes
-    Info: Processing ended: Sat Feb 25 13:11:01 2023
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 100 warnings
+    Info: Peak virtual memory: 4595 megabytes
+    Info: Processing ended: Mon Feb 27 16:47:48 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +------------------------------------------+

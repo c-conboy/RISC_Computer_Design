@@ -1,0 +1,14 @@
+module RAM (input ReadS, WriteS, input [8:0] address, inout [31:0] Data);
+	reg [31:0] mem [512];
+	reg [31:0] temp_data;
+
+	always @(data)begin
+		if(WriteS)begin
+			mem[address] <= data; 
+		end else if(ReadS)begin
+			temp_data <= mem[address]; 
+		end
+	end
+
+	assign data =  ReadS ? temp_data : 'hz;
+endmodule
