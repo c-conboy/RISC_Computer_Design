@@ -20,7 +20,7 @@ n@add_full
 !i10b 1
 !s100 hIooeGBjn31Kf1NO7mDZ01
 !s85 0
-!s108 1677529540.307000
+!s108 1677782789.156000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Add_full.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Add_full.v|
 !s101 -O0
@@ -41,7 +41,7 @@ n@add_half
 !i10b 1
 !s100 8g8:<@P;dP319HG7l9A;22
 !s85 0
-!s108 1677529540.249000
+!s108 1677782789.107000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Add_half.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Add_half.v|
 !s101 -O0
@@ -62,7 +62,7 @@ n@add_rca_16
 !i10b 1
 !s100 J3;PBnB6_4V7;J]oaH@Z>0
 !s85 0
-!s108 1677529540.432000
+!s108 1677782789.255000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_16.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_16.v|
 !s101 -O0
@@ -83,7 +83,7 @@ n@add_rca_32
 !i10b 1
 !s100 U2^@2lS;j95>ZkmH:4P[20
 !s85 0
-!s108 1677529540.489000
+!s108 1677782789.306000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_32.v|
 !s101 -O0
@@ -104,7 +104,7 @@ n@add_rca_4
 !i10b 1
 !s100 8cA=[EWRC5cOQeBC@4G<l2
 !s85 0
-!s108 1677529540.367000
+!s108 1677782789.206000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_4.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_4.v|
 !s101 -O0
@@ -125,7 +125,7 @@ n@a@l@u
 !i10b 1
 !s100 bAHcgXQ_l?AZ<;eL=2nYk3
 !s85 0
-!s108 1677529540.190000
+!s108 1677782789.056000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v|
 !s101 -O0
@@ -145,7 +145,7 @@ R4
 !i10b 1
 !s100 D]@aSnh?bYCaSlU2@I]Qe3
 !s85 0
-!s108 1677529540.132000
+!s108 1677782789.005000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/and_or.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/and_or.v|
 !s101 -O0
@@ -165,15 +165,15 @@ R4
 !i10b 1
 !s100 kj;XgC81WXdUF^iHOLZ2n0
 !s85 0
-!s108 1677529540.067000
+!s108 1677782788.957000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/bus_encoder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/bus_encoder.v|
 !s101 -O0
 vbus_multiplexer
-I0N:@<UR_Ha0_lzSQ4X4?[2
-VPNz=RUZBO6=PJ5kL`3kd;1
+I>PmA]0A?Po?zA6RB>dF1Z0
+V]D>Z5mDO0cKcLTQ2D6cPm2
 R1
-R5
+w1677780272
 8C:/altera/13.0sp1/ELEC 374/CPUProject/bus_muxVHDL.v
 FC:/altera/13.0sp1/ELEC 374/CPUProject/bus_muxVHDL.v
 L0 1
@@ -183,17 +183,17 @@ r1
 R3
 R4
 !i10b 1
-!s100 Y8C:2BgYKccJ]:_InIF`;0
+!s100 kDlH6BJ4_9PPJHM2o`mJb3
 !s85 0
-!s108 1677529541.225000
+!s108 1677782789.910000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/bus_muxVHDL.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/bus_muxVHDL.v|
 !s101 -O0
 vDatapath
-I3eX5>^[EMdk>1Nk@dL4RZ3
-V:NDUVld5VNC_L_^JPf8Lf3
+IhR3NZz<nhH1]Q[BCL1^Sz3
+V:<8:XhLH507clGbeLC>[01
 R1
-R5
+w1677780474
 8C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v
 FC:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v
 L0 1
@@ -204,9 +204,9 @@ R3
 R4
 n@datapath
 !i10b 1
-!s100 BZPRNYUa2UWof6G_eCdio1
+!s100 eaOf9TiPcH0Fm=J0mSWzC2
 !s85 0
-!s108 1677529541.089000
+!s108 1677782789.809000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v|
 !s101 -O0
@@ -226,7 +226,7 @@ R4
 !i10b 1
 !s100 Hd7mKLhaRJ<:2YRhFjjz;3
 !s85 0
-!s108 1677529541.027000
+!s108 1677782789.757000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/div.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/div.v|
 !s101 -O0
@@ -234,7 +234,7 @@ vMdMultiplexer
 I20H^fQ7OmfJ:Akfj3fWOo1
 Vh?5XY31lgmH1<ze=MGB`>1
 R1
-R5
+w1677780528
 8C:/altera/13.0sp1/ELEC 374/CPUProject/MdMuxVHDL.v
 FC:/altera/13.0sp1/ELEC 374/CPUProject/MdMuxVHDL.v
 L0 1
@@ -247,7 +247,7 @@ n@md@multiplexer
 !i10b 1
 !s100 FQ36P@dc=S2nc4`=HC3:S3
 !s85 0
-!s108 1677529541.153000
+!s108 1677782789.858000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/MdMuxVHDL.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/MdMuxVHDL.v|
 !s101 -O0
@@ -267,7 +267,7 @@ R4
 !i10b 1
 !s100 D8heoW>Qa;VW@7<4ioJbe3
 !s85 0
-!s108 1677529540.965000
+!s108 1677782789.708000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/mult.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/mult.v|
 !s101 -O0
@@ -287,27 +287,48 @@ R4
 !i10b 1
 !s100 c?Cb1Hb3^LC=^AZ0j;VQ]0
 !s85 0
-!s108 1677529540.549000
+!s108 1677782789.355000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/negate.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/negate.v|
 !s101 -O0
-vnot_datapath_tb
-!i10b 1
-!s100 KEW@?eU[MQGk1zHV[A]L<0
-IcdfVHdC9<_1L;^Qo`^2kM3
-VQAJBD<mXgc5WFX]mG^hbT1
+vRAM
+IU_9cP4f69]<?0A8i@Mz1P3
+VO<53TzTn9<nblJA:2DKh80
 R1
-R5
-8C:/altera/13.0sp1/ELEC 374/CPUProject/not_datapath_tb.v
-FC:/altera/13.0sp1/ELEC 374/CPUProject/not_datapath_tb.v
+w1677782774
+8C:/altera/13.0sp1/ELEC 374/CPUProject/RAM.v
+FC:/altera/13.0sp1/ELEC 374/CPUProject/RAM.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@r@a@m
+!i10b 1
+!s100 dVX@:]2kNhC90nDSfjRMI1
+!s85 0
+!s108 1677782789.958000
+!s107 C:/altera/13.0sp1/ELEC 374/CPUProject/RAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/RAM.v|
+!s101 -O0
+vram_datapath_tb
+!i10b 1
+!s100 kk9l95<D858IMlK`[g`7A1
+Iceh]OI^?9mOZN:KX8DjR<1
+Vl`jVR0Odjb5g>03eL:mUF0
+R1
+w1677781594
+8C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v
+FC:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v
 L0 2
 R2
 r1
 !s85 0
 31
-!s108 1677529541.292000
-!s107 C:/altera/13.0sp1/ELEC 374/CPUProject/not_datapath_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/not_datapath_tb.v|
+!s108 1677782790.009000
+!s107 C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v|
 !s101 -O0
 R3
 R4
@@ -328,7 +349,7 @@ R4
 !i10b 1
 !s100 P=7JczJkYWD<<=6T]WG`62
 !s85 0
-!s108 1677529539.920000
+!s108 1677782788.858000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v|
 !s101 -O0
@@ -349,7 +370,7 @@ n@reg64
 !i10b 1
 !s100 lL?T@UWA`TU]]:Xe785O13
 !s85 0
-!s108 1677529539.983000
+!s108 1677782788.908000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Reg64.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Reg64.v|
 !s101 -O0
@@ -369,7 +390,7 @@ R4
 !i10b 1
 !s100 @m`I=]cE]AN5iC<9IaK8Z0
 !s85 0
-!s108 1677529540.847000
+!s108 1677782789.601000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/rol.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/rol.v|
 !s101 -O0
@@ -389,7 +410,7 @@ R4
 !i10b 1
 !s100 0e@1KEZ^Mbz^W^51F^3:12
 !s85 0
-!s108 1677529540.790000
+!s108 1677782789.553000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/ror.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/ror.v|
 !s101 -O0
@@ -409,7 +430,7 @@ R4
 !i10b 1
 !s100 e:2295]X7TT1;[SPhB1XL3
 !s85 0
-!s108 1677529540.731000
+!s108 1677782789.503000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/shift_left.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/shift_left.v|
 !s101 -O0
@@ -429,7 +450,7 @@ R4
 !i10b 1
 !s100 RPI@`8TkKB3JDbMoGai[Y3
 !s85 0
-!s108 1677529540.669000
+!s108 1677782789.453000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/shift_right.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/shift_right.v|
 !s101 -O0
@@ -449,7 +470,7 @@ R4
 !i10b 1
 !s100 i[jBe<2E8;0V4M=jS[znc0
 !s85 0
-!s108 1677529540.906000
+!s108 1677782789.658000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/shra.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/shra.v|
 !s101 -O0
@@ -470,7 +491,7 @@ n@sub_rca_32
 !i10b 1
 !s100 hfOQ:BI<J1NAak_;e@=FK2
 !s85 0
-!s108 1677529540.608000
+!s108 1677782789.405000
 !s107 C:/altera/13.0sp1/ELEC 374/CPUProject/Sub_rca_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/ELEC 374/CPUProject|C:/altera/13.0sp1/ELEC 374/CPUProject/Sub_rca_32.v|
 !s101 -O0

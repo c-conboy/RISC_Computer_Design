@@ -21,6 +21,7 @@ entity Datapath is
         MDRin           : in     vl_logic;
         MDRout          : in     vl_logic;
         Read            : in     vl_logic;
+        Write           : in     vl_logic;
         R1in            : in     vl_logic;
         R1out           : in     vl_logic;
         R2in            : in     vl_logic;
@@ -51,7 +52,8 @@ entity Datapath is
         R14out          : in     vl_logic;
         R15in           : in     vl_logic;
         R15out          : in     vl_logic;
-        Mdatain         : in     vl_logic_vector(31 downto 0);
+        MBIout          : in     vl_logic;
+        manualBusInput  : in     vl_logic_vector(31 downto 0);
         OpCode          : in     vl_logic_vector(4 downto 0)
     );
 end Datapath;

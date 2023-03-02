@@ -12,4 +12,4 @@ Warning (10268): Verilog HDL information at ror_datapath_tb.v(48): always constr
 Warning (10268): Verilog HDL information at rol_datapath_tb.v(48): always construct contains both blocking and non-blocking assignments
 Warning (10268): Verilog HDL information at neg_datapath_tb.v(48): always construct contains both blocking and non-blocking assignments
 Warning (10268): Verilog HDL information at not_datapath_tb.v(48): always construct contains both blocking and non-blocking assignments
-Warning (10273): Verilog HDL warning at RAM.v(13): extended using "x" or "z"
+Warning (10268): Verilog HDL information at ram_datapath_tb.v(48): always construct contains both blocking and non-blocking assignments
