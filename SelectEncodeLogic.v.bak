@@ -1,0 +1,18 @@
+module SelectEncodeLogic (input [31:0] IRotp, input Gra, Grb, Grc, Rin, Rout, BAout, 
+output [31:0] C_sign_extended, output [15:0] RinArr, RoutArr);
+
+	and(Graout, Gra, ITotp[26:23]);
+	and(Grbout, Grb, ITotp[22:19]);
+	and(Grcout, Grc, ITotp[18:15]);
+	or(Rselect, Graout, Grbout, Grcout); 
+	and(RinArr[Rselect], Rin, 1);
+	or(RoutArr[Rselect], BAout, Rout);
+	
+	reg C = IRotp[18:0];
+	
+	case(C[18])
+			0 : C_sign_extended = {13'b0, C};
+			1 : C_sign_extended = {13'b1111111111111, C};
+	endcase
+	
+endmodule

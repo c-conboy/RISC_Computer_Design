@@ -155,6 +155,12 @@ set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id not_
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME not_datapath_tb -section_id not_datapath_tb
 set_global_assignment -name VERILOG_FILE RAM.v
 set_global_assignment -name VERILOG_FILE ram_datapath_tb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME ram_datapath_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ram_datapath_tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id ram_datapath_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ram_datapath_tb -section_id ram_datapath_tb
+set_global_assignment -name VERILOG_FILE Datapath2.v
+set_global_assignment -name VERILOG_FILE SelectEncodeLogic.v
 set_global_assignment -name EDA_TEST_BENCH_FILE ALU_tb.v -section_id ALU_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE and_datapath_tb.v -section_id and_datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE or_datapath_tb.v -section_id or_datapath_tb
@@ -169,9 +175,6 @@ set_global_assignment -name EDA_TEST_BENCH_FILE ror_datapath_tb.v -section_id ro
 set_global_assignment -name EDA_TEST_BENCH_FILE rol_datapath_tb.v -section_id rol_datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE neg_datapath_tb.v -section_id neg_datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE not_datapath_tb.v -section_id not_datapath_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME ram_datapath_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ram_datapath_tb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id ram_datapath_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ram_datapath_tb -section_id ram_datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ram_datapath_tb.v -section_id ram_datapath_tb
+set_global_assignment -name VERILOG_FILE CONFF.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

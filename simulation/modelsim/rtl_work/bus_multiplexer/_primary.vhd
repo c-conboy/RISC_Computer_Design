@@ -26,6 +26,7 @@ entity bus_multiplexer is
         BusMuxIn_PC     : in     vl_logic_vector(31 downto 0);
         BusMuxIn_MDR    : in     vl_logic_vector(31 downto 0);
         BusMuxIn_Port   : in     vl_logic_vector(31 downto 0);
+        C_sign_extended : in     vl_logic_vector(31 downto 0);
         manualBusInput  : in     vl_logic_vector(31 downto 0);
         Code            : in     vl_logic_vector(4 downto 0)
     );
