@@ -1,0 +1,46 @@
+library verilog;
+use verilog.vl_types.all;
+entity SelectEncodeLogic is
+    port(
+        IRotp           : in     vl_logic_vector(31 downto 0);
+        Gra             : in     vl_logic;
+        Grb             : in     vl_logic;
+        Grc             : in     vl_logic;
+        Rin             : in     vl_logic;
+        Rout            : in     vl_logic;
+        BAout           : in     vl_logic;
+        C_sign_extended : out    vl_logic_vector(31 downto 0);
+        R0in            : out    vl_logic;
+        R1in            : out    vl_logic;
+        R2in            : out    vl_logic;
+        R3in            : out    vl_logic;
+        R4in            : out    vl_logic;
+        R5in            : out    vl_logic;
+        R6in            : out    vl_logic;
+        R7in            : out    vl_logic;
+        R8in            : out    vl_logic;
+        R9in            : out    vl_logic;
+        R10in           : out    vl_logic;
+        R11in           : out    vl_logic;
+        R12in           : out    vl_logic;
+        R13in           : out    vl_logic;
+        R14in           : out    vl_logic;
+        R15in           : out    vl_logic;
+        R0out           : out    vl_logic;
+        R1out           : out    vl_logic;
+        R2out           : out    vl_logic;
+        R3out           : out    vl_logic;
+        R4out           : out    vl_logic;
+        R5out           : out    vl_logic;
+        R6out           : out    vl_logic;
+        R7out           : out    vl_logic;
+        R8out           : out    vl_logic;
+        R9out           : out    vl_logic;
+        R10out          : out    vl_logic;
+        R11out          : out    vl_logic;
+        R12out          : out    vl_logic;
+        R13out          : out    vl_logic;
+        R14out          : out    vl_logic;
+        R15out          : out    vl_logic
+    );
+end SelectEncodeLogic;

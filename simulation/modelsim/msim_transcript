@@ -124,12 +124,6 @@
 # 
 # Top level modules:
 # 	div
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v}
-# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module Datapath
-# 
-# Top level modules:
-# 	Datapath
 # vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/MdMuxVHDL.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module MdMultiplexer
@@ -148,18 +142,37 @@
 # 
 # Top level modules:
 # 	RAM
-# 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module ram_datapath_tb
+# -- Compiling module Datapath2
 # 
 # Top level modules:
-# 	ram_datapath_tb
+# 	Datapath2
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/SelectEncodeLogic.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SelectEncodeLogic
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  ram_datapath_tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps ram_datapath_tb 
-# Loading work.ram_datapath_tb
-# Loading work.Datapath
+# Top level modules:
+# 	SelectEncodeLogic
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/CONFF.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CONFF
+# 
+# Top level modules:
+# 	CONFF
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ld_datapath_tb
+# 
+# Top level modules:
+# 	ld_datapath_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  ld_datapath_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps ld_datapath_tb 
+# Loading work.ld_datapath_tb
+# Loading work.Datapath2
+# Loading work.SelectEncodeLogic
 # Loading work.Reg32
 # Loading work.MdMultiplexer
 # Loading work.Reg64
@@ -182,52 +195,35 @@
 # Loading work.bus_encoder
 # Loading work.bus_multiplexer
 # Loading work.RAM
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Too few port connections. Expected 53, found 37.
+# Loading work.CONFF
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
 # 
-#         Region: /ram_datapath_tb/DUT
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'HIin'.
+#         Region: /ld_datapath_tb/DUT
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'LOin'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R2in'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R3in'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R4in'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R5in'.
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(45): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R6in'.
+#         Region: /ld_datapath_tb/DUT/R0
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R7in'.
+#         Region: /ld_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R8in'.
+#         Region: /ld_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(99): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R9in'.
+#         Region: /ld_datapath_tb/DUT/InPort
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(100): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R10in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R11in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R12in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R13in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R14in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R15in'.
-# 
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(52): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /ram_datapath_tb/DUT/IR
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(69): [TFMPC] - Too few port connections. Expected 27, found 26.
-# 
-#         Region: /ram_datapath_tb/DUT/Bus_Multiplexer
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(69): [PCDPC] - Port size (32 or 32) does not match connection size (5) for port 'manualBusInput'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/bus_muxVHDL.v(1).
-# 
-#         Region: /ram_datapath_tb/DUT/Bus_Multiplexer
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(69): [TFMPC] - Missing connection for port 'Code'.
-# 
+#         Region: /ld_datapath_tb/DUT/OutPort
 # 
 # add wave *
 # view structure
@@ -235,166 +231,102 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 500 ns
+add wave -position insertpoint sim:/ld_datapath_tb/DUT/R1/*
 add wave -position insertpoint  \
-sim:/ram_datapath_tb/DUT/R1/Q
-add wave -position insertpoint sim:/ram_datapath_tb/DUT/R0/*
+sim:/ld_datapath_tb/DUT/R1/Q
 restart -f
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Too few port connections. Expected 53, found 37.
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
 # 
-#         Region: /ram_datapath_tb/DUT
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'HIin'.
+#         Region: /ld_datapath_tb/DUT
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'LOin'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R2in'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R3in'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R4in'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R5in'.
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(45): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R6in'.
+#         Region: /ld_datapath_tb/DUT/R0
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R7in'.
+#         Region: /ld_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R8in'.
+#         Region: /ld_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(99): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R9in'.
+#         Region: /ld_datapath_tb/DUT/InPort
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(100): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R10in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R11in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R12in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R13in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R14in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R15in'.
-# 
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(52): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /ram_datapath_tb/DUT/IR
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(69): [TFMPC] - Too few port connections. Expected 27, found 26.
-# 
-#         Region: /ram_datapath_tb/DUT/Bus_Multiplexer
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(69): [PCDPC] - Port size (32 or 32) does not match connection size (5) for port 'manualBusInput'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/bus_muxVHDL.v(1).
-# 
-#         Region: /ram_datapath_tb/DUT/Bus_Multiplexer
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(69): [TFMPC] - Missing connection for port 'Code'.
-# 
-run 500ns
-# WARNING: No extended dataflow license exists
-add wave -position insertpoint  \
-sim:/ram_datapath_tb/DUT/R0/Q
-add wave -position insertpoint  \
-sim:/ram_datapath_tb/DUT/Bus_Encoder/Data
-add wave -position insertpoint  \
-sim:/ram_datapath_tb/DUT/Bus_Encoder/Code
-restart
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Too few port connections. Expected 53, found 37.
-# 
-#         Region: /ram_datapath_tb/DUT
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'HIin'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'LOin'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R2in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R3in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R4in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R5in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R6in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R7in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R8in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R9in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R10in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R11in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R12in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R13in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R14in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R15in'.
-# 
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(52): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /ram_datapath_tb/DUT/IR
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(69): [TFMPC] - Too few port connections. Expected 27, found 26.
-# 
-#         Region: /ram_datapath_tb/DUT/Bus_Multiplexer
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(69): [PCDPC] - Port size (32 or 32) does not match connection size (5) for port 'manualBusInput'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/bus_muxVHDL.v(1).
-# 
-#         Region: /ram_datapath_tb/DUT/Bus_Multiplexer
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(69): [TFMPC] - Missing connection for port 'Code'.
-# 
+#         Region: /ld_datapath_tb/DUT/OutPort
 run 500ns
 add wave -position insertpoint  \
-sim:/ram_datapath_tb/DUT/MDR/Q
+{sim:/ld_datapath_tb/DUT/RAM/mem[117]}
 add wave -position insertpoint  \
-sim:/ram_datapath_tb/DUT/MAR/Q
-add wave -position insertpoint  \
-sim:/ram_datapath_tb/DUT/RAM/mem
+{sim:/ld_datapath_tb/DUT/RAM/mem[0]}
 restart -f
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Too few port connections. Expected 53, found 37.
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
 # 
-#         Region: /ram_datapath_tb/DUT
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'HIin'.
+#         Region: /ld_datapath_tb/DUT
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'LOin'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R2in'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R3in'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R4in'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R5in'.
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(45): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R6in'.
+#         Region: /ld_datapath_tb/DUT/R0
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R7in'.
+#         Region: /ld_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R8in'.
+#         Region: /ld_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(99): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R9in'.
+#         Region: /ld_datapath_tb/DUT/InPort
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(100): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R10in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R11in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R12in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R13in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R14in'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ram_datapath_tb.v(22): [TFMPC] - Missing connection for port 'R15in'.
-# 
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(52): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /ram_datapath_tb/DUT/IR
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(69): [TFMPC] - Too few port connections. Expected 27, found 26.
-# 
-#         Region: /ram_datapath_tb/DUT/Bus_Multiplexer
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(69): [PCDPC] - Port size (32 or 32) does not match connection size (5) for port 'manualBusInput'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/bus_muxVHDL.v(1).
-# 
-#         Region: /ram_datapath_tb/DUT/Bus_Multiplexer
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath.v(69): [TFMPC] - Missing connection for port 'Code'.
-# 
+#         Region: /ld_datapath_tb/DUT/OutPort
 run 500ns
-# Error opening C:/altera/13.0sp1/ELEC 374/CPUProject/simulation/modelsim/[PCDPC] - Port size (32 or 32) does not match connection size 
-# Path name 'C:/altera/13.0sp1/ELEC 374/CPUProject/simulation/modelsim/[PCDPC] - Port size (32 or 32) does not match connection size ' doesn't exist.
-# A time value could not be extracted from the current line
+add wave -position insertpoint  \
+sim:/ld_datapath_tb/DUT/IR/Q
+restart -f
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
+# 
+#         Region: /ld_datapath_tb/DUT
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
+# 
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(45): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# 
+#         Region: /ld_datapath_tb/DUT/R0
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# 
+#         Region: /ld_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# 
+#         Region: /ld_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(99): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# 
+#         Region: /ld_datapath_tb/DUT/InPort
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(100): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# 
+#         Region: /ld_datapath_tb/DUT/OutPort
+run 500ns

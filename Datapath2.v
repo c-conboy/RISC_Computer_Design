@@ -2,7 +2,7 @@ module Datapath2 (
 		//INPUTS
 		input clk, clr,
 		input HIin, HIout, LOin, LOout, PCin, PCout, 
-		IRin, Zin, Zhighout, Zlowout, Yin, MARin, MDRin, MDRout, Read, Write,
+		IRin, Zin, Zhighout, Zlowout, Yin, MARin, MDRin, MDRout, Read, Write, Cout,
 		input MBIout,
 		input [31:0] manualBusInput,
 		input [4:0] OpCode,
@@ -14,7 +14,7 @@ module Datapath2 (
 	//Make wires for all the wires (connections that arent inputs)
 	wire [31:0] BusMuxIn_R0, BusMuxIn_HI, BusMuxIn_LO, BusMuxIn_Zhigh, 
 	BusMuxIn_Zlow, BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_Port, BusMuxOut, 
-	MdMuxOutput, Y_output;
+	MdMuxOutput, Y_output, IRotp;
 	wire [63:0] ALU_Output;
 	
 	//For reg 1:15
@@ -34,27 +34,31 @@ module Datapath2 (
 	wire [15:0] RegOutSelect;
 
 	//Intantiate Select and encode logic
+	wire R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, R8in, R9in, R10in, R11in, R12in, R13in, R14in, R15in; 
+	wire R0out,R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out; 
 	SelectEncodeLogic SEL (IRotp, Gra, Grb, Grc, Rin, Rout, BAout, 
-	C_sign_extended, RegInSelect, RegOutSelect);
+	C_sign_extended, R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, R8in, R9in, R10in, R11in, R12in, R13in, R14in, R15in,
+	R0out,R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out);
+	
 	
 	//Instantiate all the registers
-	Reg32 R0(BusMuxOut, R0otp, clk, clr, RegInSelect[0]);
-	and (BusMuxIn_R0, !BAout, R0otp); 
-	Reg32 R1(BusMuxOut, BusMuxIn_R1, clk, clr, RegInSelect[1]);
-	Reg32 R2(BusMuxOut, BusMuxIn_R2, clk, clr, RegInSelect[2]);
-	Reg32 R3(BusMuxOut, BusMuxIn_R3, clk, clr, RegInSelect[3]);
-	Reg32 R4(BusMuxOut, BusMuxIn_R4, clk, clr, RegInSelect[4]);
-	Reg32 R5(BusMuxOut, BusMuxIn_R5, clk, clr, RegInSelect[5]);
-	Reg32 R6(BusMuxOut, BusMuxIn_R6, clk, clr, RegInSelect[6]);
-	Reg32 R7(BusMuxOut, BusMuxIn_R7, clk, clr, RegInSelect[7]);
-	Reg32 R8(BusMuxOut, BusMuxIn_R8, clk, clr, RegInSelect[8]);
-	Reg32 R9(BusMuxOut, BusMuxIn_R9, clk, clr, RegInSelect[9]);
-	Reg32 R10(BusMuxOut, BusMuxIn_R10, clk, clr, RegInSelect[10]);
-	Reg32 R11(BusMuxOut, BusMuxIn_R11, clk, clr, RegInSelect[11]);
-	Reg32 R12(BusMuxOut, BusMuxIn_R12, clk, clr, RegInSelect[12]);
-	Reg32 R13(BusMuxOut, BusMuxIn_R13, clk, clr, RegInSelect[13]);
-	Reg32 R14(BusMuxOut, BusMuxIn_R14, clk, clr, RegInSelect[14]);
-	Reg32 R15(BusMuxOut, BusMuxIn_R15, clk, clr, RegInSelect[15]);
+	Reg32 R0(BusMuxOut, R0otp, clk, clr, R0in);
+	assign BusMuxIn_R0 = !BAout & R0otp;
+	Reg32 R1(BusMuxOut, BusMuxIn_R1, clk, clr, R1in);
+	Reg32 R2(BusMuxOut, BusMuxIn_R2, clk, clr, R2in);
+	Reg32 R3(BusMuxOut, BusMuxIn_R3, clk, clr, R3in);
+	Reg32 R4(BusMuxOut, BusMuxIn_R4, clk, clr, R4in);
+	Reg32 R5(BusMuxOut, BusMuxIn_R5, clk, clr, R5in);
+	Reg32 R6(BusMuxOut, BusMuxIn_R6, clk, clr, R6in);
+	Reg32 R7(BusMuxOut, BusMuxIn_R7, clk, clr, R7in);
+	Reg32 R8(BusMuxOut, BusMuxIn_R8, clk, clr, R8in);
+	Reg32 R9(BusMuxOut, BusMuxIn_R9, clk, clr, R9in);
+	Reg32 R10(BusMuxOut, BusMuxIn_R10, clk, clr, R10in);
+	Reg32 R11(BusMuxOut, BusMuxIn_R11, clk, clr, R11in);
+	Reg32 R12(BusMuxOut, BusMuxIn_R12, clk, clr, R12in);
+	Reg32 R13(BusMuxOut, BusMuxIn_R13, clk, clr, R13in);
+	Reg32 R14(BusMuxOut, BusMuxIn_R14, clk, clr, R14in);
+	Reg32 R15(BusMuxOut, BusMuxIn_R15, clk, clr, R15in);
 	
 	//HI LO
 	Reg32 HI(BusMuxOut, BusMuxIn_HI, clk, clr, HIin);
@@ -76,10 +80,9 @@ module Datapath2 (
 	
 	//Instantiate the bus (encoder, multiplexer)
 	bus_encoder Bus_Encoder (Bus_Encoder_Output, {7'b0, MBIout, Cout, InPortOut, MDRout, PCout, 
-	Zlowout, Zhighout, LOout, HIout, RegOutSelect[15], RegOutSelect[14], RegOutSelect[13], RegOutSelect[12], 
-	RegOutSelect[11], RegOutSelect[10], RegOutSelect[9], RegOutSelect[8], RegOutSelect[7], 
-	RegOutSelect[6], RegOutSelect[5], RegOutSelect[4], RegOutSelect[3], 
-	RegOutSelect[2], RegOutSelect[1], RegOutSelect[0]});
+	Zlowout, Zhighout, LOout, HIout, R15out, R14out, R13out, R12out, 
+	R11out, R10out, R9out, R8out, R7out, R6out, R5out, R4out, R3out, 
+	R2out, R1out, R0out});
 	bus_multiplexer Bus_Multiplexer (BusMuxOut, BusMuxIn_R0, BusMuxIn_R1, BusMuxIn_R2, BusMuxIn_R3, 
 	BusMuxIn_R4, BusMuxIn_R5, BusMuxIn_R6, BusMuxIn_R7, BusMuxIn_R8, BusMuxIn_R9, BusMuxIn_R10, BusMuxIn_R11, 
 	BusMuxIn_R12, BusMuxIn_R13, BusMuxIn_R14, BusMuxIn_R15, BusMuxIn_HI, BusMuxIn_LO, BusMuxIn_Zhigh, BusMuxIn_Zlow, 
@@ -90,7 +93,7 @@ module Datapath2 (
 	
 	//Conditional Branch Logic
 	CONFF CONFF(IRotp[20:19], BusMuxOut, ConRegInput);
-	Reg32 CON (ConOtp, {31'b0, ConRegInput}, clk, clr, CONin);
+	Reg32 CON (ConOtp, ConRegInput, clk, clr, CONin);
 	
 	//INPUT OUTPUT PORTS
 	Reg32 InPort (Input, BusMuxIn_Port, clk, clr, StrobeEnable);

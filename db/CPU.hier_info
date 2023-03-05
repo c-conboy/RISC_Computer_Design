@@ -1,8 +1,6 @@
-|Datapath
-clk => clk.IN24
-clr => clr.IN24
-R0in => R0in.IN1
-R0out => R0out.IN1
+|Datapath2
+clk => clk.IN27
+clr => clr.IN27
 HIin => HIin.IN1
 HIout => HIout.IN1
 LOin => LOin.IN1
@@ -19,36 +17,7 @@ MDRin => MDRin.IN1
 MDRout => MDRout.IN1
 Read => Read.IN2
 Write => Write.IN1
-R1in => R1in.IN1
-R1out => R1out.IN1
-R2in => R2in.IN1
-R2out => R2out.IN1
-R3in => R3in.IN1
-R3out => R3out.IN1
-R4in => R4in.IN1
-R4out => R4out.IN1
-R5in => R5in.IN1
-R5out => R5out.IN1
-R6in => R6in.IN1
-R6out => R6out.IN1
-R7in => R7in.IN1
-R7out => R7out.IN1
-R8in => R8in.IN1
-R8out => R8out.IN1
-R9in => R9in.IN1
-R9out => R9out.IN1
-R10in => R10in.IN1
-R10out => R10out.IN1
-R11in => R11in.IN1
-R11out => R11out.IN1
-R12in => R12in.IN1
-R12out => R12out.IN1
-R13in => R13in.IN1
-R13out => R13out.IN1
-R14in => R14in.IN1
-R14out => R14out.IN1
-R15in => R15in.IN1
-R15out => R15out.IN1
+Cout => Cout.IN1
 MBIout => MBIout.IN1
 manualBusInput[0] => manualBusInput[0].IN1
 manualBusInput[1] => manualBusInput[1].IN1
@@ -87,9 +56,162 @@ OpCode[1] => OpCode[1].IN1
 OpCode[2] => OpCode[2].IN1
 OpCode[3] => OpCode[3].IN1
 OpCode[4] => OpCode[4].IN1
+Gra => Gra.IN1
+Grb => Grb.IN1
+Grc => Grc.IN1
+Rin => Rin.IN1
+Rout => Rout.IN1
+BAout => BAout.IN1
+CONin => CONin.IN1
+OutportIn => ~NO_FANOUT~
 
 
-|Datapath|Reg32:R0
+|Datapath2|SelectEncodeLogic:SEL
+IRotp[0] => C_sign_extended[0].DATAIN
+IRotp[1] => C_sign_extended[1].DATAIN
+IRotp[2] => C_sign_extended[2].DATAIN
+IRotp[3] => C_sign_extended[3].DATAIN
+IRotp[4] => C_sign_extended[4].DATAIN
+IRotp[5] => C_sign_extended[5].DATAIN
+IRotp[6] => C_sign_extended[6].DATAIN
+IRotp[7] => C_sign_extended[7].DATAIN
+IRotp[8] => C_sign_extended[8].DATAIN
+IRotp[9] => C_sign_extended[9].DATAIN
+IRotp[10] => C_sign_extended[10].DATAIN
+IRotp[11] => C_sign_extended[11].DATAIN
+IRotp[12] => C_sign_extended[12].DATAIN
+IRotp[13] => C_sign_extended[13].DATAIN
+IRotp[14] => C_sign_extended[14].DATAIN
+IRotp[15] => Rselect[0].DATAB
+IRotp[15] => C_sign_extended[15].DATAIN
+IRotp[16] => Rselect[1].DATAB
+IRotp[16] => C_sign_extended[16].DATAIN
+IRotp[17] => Rselect[2].DATAB
+IRotp[17] => C_sign_extended[17].DATAIN
+IRotp[18] => Rselect[3].DATAB
+IRotp[18] => C_sign_extended[18].DATAIN
+IRotp[18] => C_sign_extended[31].DATAIN
+IRotp[18] => C_sign_extended[30].DATAIN
+IRotp[18] => C_sign_extended[29].DATAIN
+IRotp[18] => C_sign_extended[28].DATAIN
+IRotp[18] => C_sign_extended[27].DATAIN
+IRotp[18] => C_sign_extended[26].DATAIN
+IRotp[18] => C_sign_extended[25].DATAIN
+IRotp[18] => C_sign_extended[24].DATAIN
+IRotp[18] => C_sign_extended[23].DATAIN
+IRotp[18] => C_sign_extended[22].DATAIN
+IRotp[18] => C_sign_extended[21].DATAIN
+IRotp[18] => C_sign_extended[20].DATAIN
+IRotp[18] => C_sign_extended[19].DATAIN
+IRotp[19] => Rselect[0].DATAB
+IRotp[20] => Rselect[1].DATAB
+IRotp[21] => Rselect[2].DATAB
+IRotp[22] => Rselect[3].DATAB
+IRotp[23] => Rselect[0].DATAA
+IRotp[24] => Rselect[1].DATAA
+IRotp[25] => Rselect[2].DATAA
+IRotp[26] => Rselect[3].DATAA
+IRotp[27] => ~NO_FANOUT~
+IRotp[28] => ~NO_FANOUT~
+IRotp[29] => ~NO_FANOUT~
+IRotp[30] => ~NO_FANOUT~
+IRotp[31] => ~NO_FANOUT~
+Gra => Rselect[4].IN0
+Grb => Rselect[0].OUTPUTSELECT
+Grb => Rselect[1].OUTPUTSELECT
+Grb => Rselect[2].OUTPUTSELECT
+Grb => Rselect[3].OUTPUTSELECT
+Grb => Rselect[4].IN1
+Grc => Rselect[0].OUTPUTSELECT
+Grc => Rselect[1].OUTPUTSELECT
+Grc => Rselect[2].OUTPUTSELECT
+Grc => Rselect[3].OUTPUTSELECT
+Grc => Rselect[4].IN1
+Rin => R0in$latch.DATAIN
+Rin => R1in$latch.DATAIN
+Rin => R2in$latch.DATAIN
+Rin => R3in$latch.DATAIN
+Rin => R4in$latch.DATAIN
+Rin => R5in$latch.DATAIN
+Rin => R6in$latch.DATAIN
+Rin => R7in$latch.DATAIN
+Rin => R8in$latch.DATAIN
+Rin => R9in$latch.DATAIN
+Rin => R10in$latch.DATAIN
+Rin => R11in$latch.DATAIN
+Rin => R12in$latch.DATAIN
+Rin => R13in$latch.DATAIN
+Rin => R14in$latch.DATAIN
+Rin => R15in$latch.DATAIN
+Rout => R0out.IN0
+BAout => R0out.IN1
+C_sign_extended[0] <= IRotp[0].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[1] <= IRotp[1].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[2] <= IRotp[2].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[3] <= IRotp[3].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[4] <= IRotp[4].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[5] <= IRotp[5].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[6] <= IRotp[6].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[7] <= IRotp[7].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[8] <= IRotp[8].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[9] <= IRotp[9].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[10] <= IRotp[10].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[11] <= IRotp[11].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[12] <= IRotp[12].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[13] <= IRotp[13].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[14] <= IRotp[14].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[15] <= IRotp[15].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[16] <= IRotp[16].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[17] <= IRotp[17].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[18] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[19] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[20] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[21] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[22] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[23] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[24] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[25] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[26] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[27] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[28] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[29] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[30] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+C_sign_extended[31] <= IRotp[18].DB_MAX_OUTPUT_PORT_TYPE
+R0in <= R0in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R1in <= R1in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R2in <= R2in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R3in <= R3in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R4in <= R4in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R5in <= R5in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R6in <= R6in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R7in <= R7in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R8in <= R8in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R9in <= R9in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R10in <= R10in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R11in <= R11in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R12in <= R12in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R13in <= R13in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R14in <= R14in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R15in <= R15in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R0out <= R0out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R1out <= R1out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R2out <= R2out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R3out <= R3out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R4out <= R4out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R5out <= R5out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R6out <= R6out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R7out <= R7out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R8out <= R8out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R9out <= R9out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R10out <= R10out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R11out <= R11out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R12out <= R12out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R13out <= R13out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R14out <= R14out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R15out <= R15out$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Datapath2|Reg32:R0
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -221,7 +343,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R1
+|Datapath2|Reg32:R1
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -353,7 +475,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R2
+|Datapath2|Reg32:R2
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -485,7 +607,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R3
+|Datapath2|Reg32:R3
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -617,7 +739,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R4
+|Datapath2|Reg32:R4
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -749,7 +871,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R5
+|Datapath2|Reg32:R5
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -881,7 +1003,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R6
+|Datapath2|Reg32:R6
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -1013,7 +1135,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R7
+|Datapath2|Reg32:R7
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -1145,7 +1267,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R8
+|Datapath2|Reg32:R8
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -1277,7 +1399,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R9
+|Datapath2|Reg32:R9
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -1409,7 +1531,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R10
+|Datapath2|Reg32:R10
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -1541,7 +1663,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R11
+|Datapath2|Reg32:R11
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -1673,7 +1795,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R12
+|Datapath2|Reg32:R12
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -1805,7 +1927,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R13
+|Datapath2|Reg32:R13
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -1937,7 +2059,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R14
+|Datapath2|Reg32:R14
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -2069,7 +2191,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:R15
+|Datapath2|Reg32:R15
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -2201,7 +2323,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:HI
+|Datapath2|Reg32:HI
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -2333,7 +2455,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:LO
+|Datapath2|Reg32:LO
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -2465,7 +2587,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:PC
+|Datapath2|Reg32:PC
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -2597,7 +2719,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:IR
+|Datapath2|Reg32:IR
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -2729,7 +2851,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:MDR
+|Datapath2|Reg32:MDR
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -2861,7 +2983,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg32:MAR
+|Datapath2|Reg32:MAR
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -2993,7 +3115,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|MdMultiplexer:MMUX
+|Datapath2|MdMultiplexer:MMUX
 BusMuxOut[0] => MdMuxOutput.DATAA
 BusMuxOut[1] => MdMuxOutput.DATAA
 BusMuxOut[2] => MdMuxOutput.DATAA
@@ -3124,7 +3246,7 @@ MdMuxOutput[30] <= MdMuxOutput.DB_MAX_OUTPUT_PORT_TYPE
 MdMuxOutput[31] <= MdMuxOutput.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|Reg32:Y
+|Datapath2|Reg32:Y
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -3256,7 +3378,7 @@ e => Q[30]$latch.LATCH_ENABLE
 e => Q[31]$latch.LATCH_ENABLE
 
 
-|Datapath|Reg64:Z
+|Datapath2|Reg64:Z
 D[0] => Q[0]$latch.DATAIN
 D[1] => Q[1]$latch.DATAIN
 D[2] => Q[2]$latch.DATAIN
@@ -3516,7 +3638,7 @@ e => Q[62]$latch.LATCH_ENABLE
 e => Q[63]$latch.LATCH_ENABLE
 
 
-|Datapath|ALU:ALU
+|Datapath2|ALU:ALU
 A[31] => A[31].IN11
 A[30] => A[30].IN11
 A[29] => A[29].IN11
@@ -3967,7 +4089,7 @@ C[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 C[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|ALU:ALU|and_or:and_instance
+|Datapath2|ALU:ALU|and_or:and_instance
 A[31] => result.IN0
 A[31] => result.IN0
 A[30] => result.IN0
@@ -4162,7 +4284,7 @@ result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|ALU:ALU|and_or:or_instance
+|Datapath2|ALU:ALU|and_or:or_instance
 A[31] => result.IN0
 A[31] => result.IN0
 A[30] => result.IN0
@@ -4357,7 +4479,7 @@ result[1] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[0] <= result.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance
+|Datapath2|ALU:ALU|Add_rca_32:add_instance
 c_out <= Add_rca_16:M2.port0
 sum[0] <= Add_rca_16:M1.port1
 sum[1] <= Add_rca_16:M1.port1
@@ -4458,7 +4580,7 @@ b[31] => b[31].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1
 c_out <= Add_rca_4:M4.port0
 sum[0] <= Add_rca_4:M1.port1
 sum[1] <= Add_rca_4:M1.port1
@@ -4511,7 +4633,7 @@ b[15] => b[15].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -4528,7 +4650,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4536,7 +4658,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4545,7 +4667,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4554,7 +4676,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4562,7 +4684,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4571,7 +4693,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4580,7 +4702,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4588,7 +4710,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4597,7 +4719,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4606,7 +4728,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4614,7 +4736,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4623,7 +4745,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4632,7 +4754,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -4649,7 +4771,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4657,7 +4779,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4666,7 +4788,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4675,7 +4797,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4683,7 +4805,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4692,7 +4814,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4701,7 +4823,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4709,7 +4831,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4718,7 +4840,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4727,7 +4849,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4735,7 +4857,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4744,7 +4866,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4753,7 +4875,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -4770,7 +4892,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4778,7 +4900,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4787,7 +4909,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4796,7 +4918,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4804,7 +4926,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4813,7 +4935,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4822,7 +4944,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4830,7 +4952,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4839,7 +4961,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4848,7 +4970,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4856,7 +4978,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4865,7 +4987,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4874,7 +4996,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -4891,7 +5013,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4899,7 +5021,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4908,7 +5030,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4917,7 +5039,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4925,7 +5047,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4934,7 +5056,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4943,7 +5065,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4951,7 +5073,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4960,7 +5082,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4969,7 +5091,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -4977,7 +5099,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4986,7 +5108,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -4995,7 +5117,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2
 c_out <= Add_rca_4:M4.port0
 sum[0] <= Add_rca_4:M1.port1
 sum[1] <= Add_rca_4:M1.port1
@@ -5048,7 +5170,7 @@ b[15] => b[15].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -5065,7 +5187,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5073,7 +5195,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5082,7 +5204,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5091,7 +5213,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5099,7 +5221,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5108,7 +5230,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5117,7 +5239,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5125,7 +5247,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5134,7 +5256,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5143,7 +5265,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5151,7 +5273,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5160,7 +5282,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5169,7 +5291,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -5186,7 +5308,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5194,7 +5316,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5203,7 +5325,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5212,7 +5334,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5220,7 +5342,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5229,7 +5351,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5238,7 +5360,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5246,7 +5368,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5255,7 +5377,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5264,7 +5386,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5272,7 +5394,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5281,7 +5403,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5290,7 +5412,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -5307,7 +5429,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5315,7 +5437,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5324,7 +5446,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5333,7 +5455,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5341,7 +5463,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5350,7 +5472,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5359,7 +5481,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5367,7 +5489,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5376,7 +5498,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5385,7 +5507,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5393,7 +5515,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5402,7 +5524,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5411,7 +5533,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -5428,7 +5550,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5436,7 +5558,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5445,7 +5567,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5454,7 +5576,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5462,7 +5584,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5471,7 +5593,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5480,7 +5602,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5488,7 +5610,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5497,7 +5619,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5506,7 +5628,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5514,7 +5636,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5523,7 +5645,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:add_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5532,7 +5654,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance
 c_out <= Add_rca_16:M2.port0
 sum[0] <= Add_rca_16:M1.port1
 sum[1] <= Add_rca_16:M1.port1
@@ -5633,7 +5755,7 @@ b[31] => b[31].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1
 c_out <= Add_rca_4:M4.port0
 sum[0] <= Add_rca_4:M1.port1
 sum[1] <= Add_rca_4:M1.port1
@@ -5686,7 +5808,7 @@ b[15] => b[15].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -5703,7 +5825,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5711,7 +5833,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5720,7 +5842,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5729,7 +5851,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5737,7 +5859,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5746,7 +5868,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5755,7 +5877,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5763,7 +5885,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5772,7 +5894,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5781,7 +5903,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5789,7 +5911,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5798,7 +5920,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5807,7 +5929,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -5824,7 +5946,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5832,7 +5954,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5841,7 +5963,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5850,7 +5972,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5858,7 +5980,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5867,7 +5989,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5876,7 +5998,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5884,7 +6006,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5893,7 +6015,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5902,7 +6024,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5910,7 +6032,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5919,7 +6041,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5928,7 +6050,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -5945,7 +6067,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5953,7 +6075,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5962,7 +6084,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5971,7 +6093,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -5979,7 +6101,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5988,7 +6110,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -5997,7 +6119,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6005,7 +6127,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6014,7 +6136,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6023,7 +6145,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6031,7 +6153,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6040,7 +6162,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6049,7 +6171,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -6066,7 +6188,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6074,7 +6196,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6083,7 +6205,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6092,7 +6214,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6100,7 +6222,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6109,7 +6231,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6118,7 +6240,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6126,7 +6248,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6135,7 +6257,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6144,7 +6266,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6152,7 +6274,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6161,7 +6283,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6170,7 +6292,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2
 c_out <= Add_rca_4:M4.port0
 sum[0] <= Add_rca_4:M1.port1
 sum[1] <= Add_rca_4:M1.port1
@@ -6223,7 +6345,7 @@ b[15] => b[15].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -6240,7 +6362,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6248,7 +6370,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6257,7 +6379,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6266,7 +6388,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6274,7 +6396,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6283,7 +6405,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6292,7 +6414,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6300,7 +6422,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6309,7 +6431,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6318,7 +6440,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6326,7 +6448,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6335,7 +6457,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6344,7 +6466,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -6361,7 +6483,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6369,7 +6491,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6378,7 +6500,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6387,7 +6509,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6395,7 +6517,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6404,7 +6526,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6413,7 +6535,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6421,7 +6543,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6430,7 +6552,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6439,7 +6561,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6447,7 +6569,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6456,7 +6578,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6465,7 +6587,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -6482,7 +6604,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6490,7 +6612,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6499,7 +6621,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6508,7 +6630,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6516,7 +6638,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6525,7 +6647,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6534,7 +6656,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6542,7 +6664,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6551,7 +6673,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6560,7 +6682,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6568,7 +6690,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6577,7 +6699,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6586,7 +6708,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -6603,7 +6725,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6611,7 +6733,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6620,7 +6742,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6629,7 +6751,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6637,7 +6759,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6646,7 +6768,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6655,7 +6777,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6663,7 +6785,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6672,7 +6794,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6681,7 +6803,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6689,7 +6811,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6698,7 +6820,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Add_rca_32:inc_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6707,7 +6829,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance
 c_out <= Add_rca_16:M2.port0
 sum[0] <= Add_rca_16:M1.port1
 sum[1] <= Add_rca_16:M1.port1
@@ -6808,7 +6930,7 @@ b[31] => Add0.IN33
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1
 c_out <= Add_rca_4:M4.port0
 sum[0] <= Add_rca_4:M1.port1
 sum[1] <= Add_rca_4:M1.port1
@@ -6861,7 +6983,7 @@ b[15] => b[15].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -6878,7 +7000,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6886,7 +7008,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6895,7 +7017,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6904,7 +7026,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6912,7 +7034,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6921,7 +7043,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6930,7 +7052,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6938,7 +7060,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6947,7 +7069,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6956,7 +7078,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -6964,7 +7086,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6973,7 +7095,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M1|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -6982,7 +7104,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -6999,7 +7121,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7007,7 +7129,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7016,7 +7138,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7025,7 +7147,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7033,7 +7155,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7042,7 +7164,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7051,7 +7173,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7059,7 +7181,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7068,7 +7190,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7077,7 +7199,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7085,7 +7207,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7094,7 +7216,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M2|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7103,7 +7225,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -7120,7 +7242,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7128,7 +7250,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7137,7 +7259,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7146,7 +7268,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7154,7 +7276,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7163,7 +7285,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7172,7 +7294,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7180,7 +7302,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7189,7 +7311,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7198,7 +7320,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7206,7 +7328,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7215,7 +7337,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M3|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7224,7 +7346,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -7241,7 +7363,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7249,7 +7371,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7258,7 +7380,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7267,7 +7389,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7275,7 +7397,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7284,7 +7406,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7293,7 +7415,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7301,7 +7423,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7310,7 +7432,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7319,7 +7441,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7327,7 +7449,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7336,7 +7458,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M1|Add_rca_4:M4|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7345,7 +7467,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2
 c_out <= Add_rca_4:M4.port0
 sum[0] <= Add_rca_4:M1.port1
 sum[1] <= Add_rca_4:M1.port1
@@ -7398,7 +7520,7 @@ b[15] => b[15].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -7415,7 +7537,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7423,7 +7545,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7432,7 +7554,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7441,7 +7563,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7449,7 +7571,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7458,7 +7580,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7467,7 +7589,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7475,7 +7597,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7484,7 +7606,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7493,7 +7615,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7501,7 +7623,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7510,7 +7632,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M1|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7519,7 +7641,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -7536,7 +7658,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7544,7 +7666,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7553,7 +7675,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7562,7 +7684,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7570,7 +7692,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7579,7 +7701,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7588,7 +7710,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7596,7 +7718,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7605,7 +7727,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7614,7 +7736,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7622,7 +7744,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7631,7 +7753,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M2|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7640,7 +7762,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -7657,7 +7779,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7665,7 +7787,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7674,7 +7796,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7683,7 +7805,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7691,7 +7813,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7700,7 +7822,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7709,7 +7831,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7717,7 +7839,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7726,7 +7848,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7735,7 +7857,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7743,7 +7865,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7752,7 +7874,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M3|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7761,7 +7883,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4
 c_out <= Add_full:M4.port0
 sum[0] <= Add_full:M1.port1
 sum[1] <= Add_full:M2.port1
@@ -7778,7 +7900,7 @@ b[3] => b[3].IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7786,7 +7908,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7795,7 +7917,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M1|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7804,7 +7926,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7812,7 +7934,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7821,7 +7943,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M2|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7830,7 +7952,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7838,7 +7960,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7847,7 +7969,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M3|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7856,7 +7978,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4
 c_out <= M3.DB_MAX_OUTPUT_PORT_TYPE
 sum <= Add_half:M2.port1
 a => a.IN1
@@ -7864,7 +7986,7 @@ b => b.IN1
 c_in => c_in.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4|Add_half:M1
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4|Add_half:M1
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7873,7 +7995,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4|Add_half:M2
+|Datapath2|ALU:ALU|Sub_rca_32:sub_instance|Add_rca_16:M2|Add_rca_4:M4|Add_full:M4|Add_half:M2
 c_out <= M2.DB_MAX_OUTPUT_PORT_TYPE
 sum <= M1.DB_MAX_OUTPUT_PORT_TYPE
 a => M1.IN0
@@ -7882,7 +8004,7 @@ b => M1.IN1
 b => M2.IN1
 
 
-|Datapath|ALU:ALU|negate:negate_instance
+|Datapath2|ALU:ALU|negate:negate_instance
 C[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 C[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 C[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
@@ -7949,7 +8071,7 @@ A[30] => Add0.IN34
 A[31] => Add0.IN33
 
 
-|Datapath|ALU:ALU|shift_right:shift_right_instance
+|Datapath2|ALU:ALU|shift_right:shift_right_instance
 C[0] <= C.DB_MAX_OUTPUT_PORT_TYPE
 C[1] <= C.DB_MAX_OUTPUT_PORT_TYPE
 C[2] <= C.DB_MAX_OUTPUT_PORT_TYPE
@@ -9038,7 +9160,7 @@ B[31] => LessThan29.IN33
 B[31] => LessThan30.IN33
 
 
-|Datapath|ALU:ALU|shift_left:shift_left_instance
+|Datapath2|ALU:ALU|shift_left:shift_left_instance
 C[0] <= <GND>
 C[1] <= C.DB_MAX_OUTPUT_PORT_TYPE
 C[2] <= C.DB_MAX_OUTPUT_PORT_TYPE
@@ -10127,7 +10249,7 @@ B[31] => LessThan29.IN33
 B[31] => LessThan30.IN33
 
 
-|Datapath|ALU:ALU|ror:ror_instance
+|Datapath2|ALU:ALU|ror:ror_instance
 C[0] <= C.DB_MAX_OUTPUT_PORT_TYPE
 C[1] <= C.DB_MAX_OUTPUT_PORT_TYPE
 C[2] <= C.DB_MAX_OUTPUT_PORT_TYPE
@@ -11218,7 +11340,7 @@ B[31] => LessThan29.IN33
 B[31] => LessThan30.IN33
 
 
-|Datapath|ALU:ALU|rol:rol_instance
+|Datapath2|ALU:ALU|rol:rol_instance
 C[0] <= C.DB_MAX_OUTPUT_PORT_TYPE
 C[1] <= C.DB_MAX_OUTPUT_PORT_TYPE
 C[2] <= C.DB_MAX_OUTPUT_PORT_TYPE
@@ -12309,7 +12431,7 @@ B[31] => LessThan29.IN33
 B[31] => LessThan30.IN33
 
 
-|Datapath|ALU:ALU|shra:shra_instance
+|Datapath2|ALU:ALU|shra:shra_instance
 C[0] <= C.DB_MAX_OUTPUT_PORT_TYPE
 C[1] <= C.DB_MAX_OUTPUT_PORT_TYPE
 C[2] <= C.DB_MAX_OUTPUT_PORT_TYPE
@@ -13429,7 +13551,7 @@ B[31] => LessThan29.IN33
 B[31] => LessThan30.IN33
 
 
-|Datapath|ALU:ALU|mult:mult_instance
+|Datapath2|ALU:ALU|mult:mult_instance
 A[0] => Mux0.IN9
 A[0] => Mux1.IN9
 A[0] => Mux2.IN9
@@ -16388,7 +16510,7 @@ C[62] <= Add14.DB_MAX_OUTPUT_PORT_TYPE
 C[63] <= Add14.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|ALU:ALU|div:div_instance
+|Datapath2|ALU:ALU|div:div_instance
 A[0] => Qp[0].DATAA
 A[0] => Add0.IN64
 A[1] => Qp[1].DATAA
@@ -16709,7 +16831,7 @@ C[62] <= AQs.DB_MAX_OUTPUT_PORT_TYPE
 C[63] <= AQs.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Datapath|bus_encoder:Bus_Encoder
+|Datapath2|bus_encoder:Bus_Encoder
 Code[0] <= Code.DB_MAX_OUTPUT_PORT_TYPE
 Code[1] <= Code.DB_MAX_OUTPUT_PORT_TYPE
 Code[2] <= Code.DB_MAX_OUTPUT_PORT_TYPE
@@ -16847,7 +16969,7 @@ Data[30] => Code.DATAA
 Data[31] => ~NO_FANOUT~
 
 
-|Datapath|bus_multiplexer:Bus_Multiplexer
+|Datapath2|bus_multiplexer:Bus_Multiplexer
 BusMuxOut[0] <= Mux31.DB_MAX_OUTPUT_PORT_TYPE
 BusMuxOut[1] <= Mux30.DB_MAX_OUTPUT_PORT_TYPE
 BusMuxOut[2] <= Mux29.DB_MAX_OUTPUT_PORT_TYPE
@@ -18066,7 +18188,7 @@ Code[4] => Mux30.IN32
 Code[4] => Mux31.IN32
 
 
-|Datapath|RAM:RAM
+|Datapath2|RAM:RAM
 ReadS => Data[0].OE
 ReadS => Data[1].OE
 ReadS => Data[2].OE
@@ -18150,5 +18272,447 @@ Data[28] <> Data[28]
 Data[29] <> Data[29]
 Data[30] <> Data[30]
 Data[31] <> Data[31]
+
+
+|Datapath2|CONFF:CONFF
+C2[0] => WideAnd1.IN1
+C2[0] => WideAnd3.IN0
+C2[0] => WideAnd0.IN1
+C2[0] => WideAnd2.IN0
+C2[1] => WideAnd2.IN1
+C2[1] => WideAnd3.IN1
+C2[1] => WideAnd0.IN2
+C2[1] => WideAnd1.IN2
+BusMuxOut[0] => WideNor0.IN0
+BusMuxOut[1] => WideNor0.IN1
+BusMuxOut[2] => WideNor0.IN2
+BusMuxOut[3] => WideNor0.IN3
+BusMuxOut[4] => WideNor0.IN4
+BusMuxOut[5] => WideNor0.IN5
+BusMuxOut[6] => WideNor0.IN6
+BusMuxOut[7] => WideNor0.IN7
+BusMuxOut[8] => WideNor0.IN8
+BusMuxOut[9] => WideNor0.IN9
+BusMuxOut[10] => WideNor0.IN10
+BusMuxOut[11] => WideNor0.IN11
+BusMuxOut[12] => WideNor0.IN12
+BusMuxOut[13] => WideNor0.IN13
+BusMuxOut[14] => WideNor0.IN14
+BusMuxOut[15] => WideNor0.IN15
+BusMuxOut[16] => WideNor0.IN16
+BusMuxOut[17] => WideNor0.IN17
+BusMuxOut[18] => WideNor0.IN18
+BusMuxOut[19] => WideNor0.IN19
+BusMuxOut[20] => WideNor0.IN20
+BusMuxOut[21] => WideNor0.IN21
+BusMuxOut[22] => WideNor0.IN22
+BusMuxOut[23] => WideNor0.IN23
+BusMuxOut[24] => WideNor0.IN24
+BusMuxOut[25] => WideNor0.IN25
+BusMuxOut[26] => WideNor0.IN26
+BusMuxOut[27] => WideNor0.IN27
+BusMuxOut[28] => WideNor0.IN28
+BusMuxOut[29] => WideNor0.IN29
+BusMuxOut[30] => WideNor0.IN30
+BusMuxOut[31] => WideNor0.IN31
+BusMuxOut[31] => WideAnd3.IN2
+BusMuxOut[31] => WideAnd2.IN2
+ConRegInput <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Datapath2|Reg32:CON
+D[0] => Q[0]$latch.DATAIN
+D[1] => Q[1]$latch.DATAIN
+D[2] => Q[2]$latch.DATAIN
+D[3] => Q[3]$latch.DATAIN
+D[4] => Q[4]$latch.DATAIN
+D[5] => Q[5]$latch.DATAIN
+D[6] => Q[6]$latch.DATAIN
+D[7] => Q[7]$latch.DATAIN
+D[8] => Q[8]$latch.DATAIN
+D[9] => Q[9]$latch.DATAIN
+D[10] => Q[10]$latch.DATAIN
+D[11] => Q[11]$latch.DATAIN
+D[12] => Q[12]$latch.DATAIN
+D[13] => Q[13]$latch.DATAIN
+D[14] => Q[14]$latch.DATAIN
+D[15] => Q[15]$latch.DATAIN
+D[16] => Q[16]$latch.DATAIN
+D[17] => Q[17]$latch.DATAIN
+D[18] => Q[18]$latch.DATAIN
+D[19] => Q[19]$latch.DATAIN
+D[20] => Q[20]$latch.DATAIN
+D[21] => Q[21]$latch.DATAIN
+D[22] => Q[22]$latch.DATAIN
+D[23] => Q[23]$latch.DATAIN
+D[24] => Q[24]$latch.DATAIN
+D[25] => Q[25]$latch.DATAIN
+D[26] => Q[26]$latch.DATAIN
+D[27] => Q[27]$latch.DATAIN
+D[28] => Q[28]$latch.DATAIN
+D[29] => Q[29]$latch.DATAIN
+D[30] => Q[30]$latch.DATAIN
+D[31] => Q[31]$latch.DATAIN
+Q[0] <= Q[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[16] <= Q[16]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[17] <= Q[17]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[18] <= Q[18]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[19] <= Q[19]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[20] <= Q[20]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[21] <= Q[21]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[22] <= Q[22]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[23] <= Q[23]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[24] <= Q[24]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[25] <= Q[25]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[26] <= Q[26]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[27] <= Q[27]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[28] <= Q[28]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[29] <= Q[29]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[30] <= Q[30]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[31] <= Q[31]$latch.DB_MAX_OUTPUT_PORT_TYPE
+clk => ~NO_FANOUT~
+clr => Q[0]$latch.ACLR
+clr => Q[1]$latch.ACLR
+clr => Q[2]$latch.ACLR
+clr => Q[3]$latch.ACLR
+clr => Q[4]$latch.ACLR
+clr => Q[5]$latch.ACLR
+clr => Q[6]$latch.ACLR
+clr => Q[7]$latch.ACLR
+clr => Q[8]$latch.ACLR
+clr => Q[9]$latch.ACLR
+clr => Q[10]$latch.ACLR
+clr => Q[11]$latch.ACLR
+clr => Q[12]$latch.ACLR
+clr => Q[13]$latch.ACLR
+clr => Q[14]$latch.ACLR
+clr => Q[15]$latch.ACLR
+clr => Q[16]$latch.ACLR
+clr => Q[17]$latch.ACLR
+clr => Q[18]$latch.ACLR
+clr => Q[19]$latch.ACLR
+clr => Q[20]$latch.ACLR
+clr => Q[21]$latch.ACLR
+clr => Q[22]$latch.ACLR
+clr => Q[23]$latch.ACLR
+clr => Q[24]$latch.ACLR
+clr => Q[25]$latch.ACLR
+clr => Q[26]$latch.ACLR
+clr => Q[27]$latch.ACLR
+clr => Q[28]$latch.ACLR
+clr => Q[29]$latch.ACLR
+clr => Q[30]$latch.ACLR
+clr => Q[31]$latch.ACLR
+e => Q[0]$latch.LATCH_ENABLE
+e => Q[1]$latch.LATCH_ENABLE
+e => Q[2]$latch.LATCH_ENABLE
+e => Q[3]$latch.LATCH_ENABLE
+e => Q[4]$latch.LATCH_ENABLE
+e => Q[5]$latch.LATCH_ENABLE
+e => Q[6]$latch.LATCH_ENABLE
+e => Q[7]$latch.LATCH_ENABLE
+e => Q[8]$latch.LATCH_ENABLE
+e => Q[9]$latch.LATCH_ENABLE
+e => Q[10]$latch.LATCH_ENABLE
+e => Q[11]$latch.LATCH_ENABLE
+e => Q[12]$latch.LATCH_ENABLE
+e => Q[13]$latch.LATCH_ENABLE
+e => Q[14]$latch.LATCH_ENABLE
+e => Q[15]$latch.LATCH_ENABLE
+e => Q[16]$latch.LATCH_ENABLE
+e => Q[17]$latch.LATCH_ENABLE
+e => Q[18]$latch.LATCH_ENABLE
+e => Q[19]$latch.LATCH_ENABLE
+e => Q[20]$latch.LATCH_ENABLE
+e => Q[21]$latch.LATCH_ENABLE
+e => Q[22]$latch.LATCH_ENABLE
+e => Q[23]$latch.LATCH_ENABLE
+e => Q[24]$latch.LATCH_ENABLE
+e => Q[25]$latch.LATCH_ENABLE
+e => Q[26]$latch.LATCH_ENABLE
+e => Q[27]$latch.LATCH_ENABLE
+e => Q[28]$latch.LATCH_ENABLE
+e => Q[29]$latch.LATCH_ENABLE
+e => Q[30]$latch.LATCH_ENABLE
+e => Q[31]$latch.LATCH_ENABLE
+
+
+|Datapath2|Reg32:InPort
+D[0] => Q[0]$latch.DATAIN
+D[1] => Q[1]$latch.DATAIN
+D[2] => Q[2]$latch.DATAIN
+D[3] => Q[3]$latch.DATAIN
+D[4] => Q[4]$latch.DATAIN
+D[5] => Q[5]$latch.DATAIN
+D[6] => Q[6]$latch.DATAIN
+D[7] => Q[7]$latch.DATAIN
+D[8] => Q[8]$latch.DATAIN
+D[9] => Q[9]$latch.DATAIN
+D[10] => Q[10]$latch.DATAIN
+D[11] => Q[11]$latch.DATAIN
+D[12] => Q[12]$latch.DATAIN
+D[13] => Q[13]$latch.DATAIN
+D[14] => Q[14]$latch.DATAIN
+D[15] => Q[15]$latch.DATAIN
+D[16] => Q[16]$latch.DATAIN
+D[17] => Q[17]$latch.DATAIN
+D[18] => Q[18]$latch.DATAIN
+D[19] => Q[19]$latch.DATAIN
+D[20] => Q[20]$latch.DATAIN
+D[21] => Q[21]$latch.DATAIN
+D[22] => Q[22]$latch.DATAIN
+D[23] => Q[23]$latch.DATAIN
+D[24] => Q[24]$latch.DATAIN
+D[25] => Q[25]$latch.DATAIN
+D[26] => Q[26]$latch.DATAIN
+D[27] => Q[27]$latch.DATAIN
+D[28] => Q[28]$latch.DATAIN
+D[29] => Q[29]$latch.DATAIN
+D[30] => Q[30]$latch.DATAIN
+D[31] => Q[31]$latch.DATAIN
+Q[0] <= Q[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[16] <= Q[16]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[17] <= Q[17]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[18] <= Q[18]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[19] <= Q[19]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[20] <= Q[20]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[21] <= Q[21]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[22] <= Q[22]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[23] <= Q[23]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[24] <= Q[24]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[25] <= Q[25]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[26] <= Q[26]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[27] <= Q[27]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[28] <= Q[28]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[29] <= Q[29]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[30] <= Q[30]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[31] <= Q[31]$latch.DB_MAX_OUTPUT_PORT_TYPE
+clk => ~NO_FANOUT~
+clr => Q[0]$latch.ACLR
+clr => Q[1]$latch.ACLR
+clr => Q[2]$latch.ACLR
+clr => Q[3]$latch.ACLR
+clr => Q[4]$latch.ACLR
+clr => Q[5]$latch.ACLR
+clr => Q[6]$latch.ACLR
+clr => Q[7]$latch.ACLR
+clr => Q[8]$latch.ACLR
+clr => Q[9]$latch.ACLR
+clr => Q[10]$latch.ACLR
+clr => Q[11]$latch.ACLR
+clr => Q[12]$latch.ACLR
+clr => Q[13]$latch.ACLR
+clr => Q[14]$latch.ACLR
+clr => Q[15]$latch.ACLR
+clr => Q[16]$latch.ACLR
+clr => Q[17]$latch.ACLR
+clr => Q[18]$latch.ACLR
+clr => Q[19]$latch.ACLR
+clr => Q[20]$latch.ACLR
+clr => Q[21]$latch.ACLR
+clr => Q[22]$latch.ACLR
+clr => Q[23]$latch.ACLR
+clr => Q[24]$latch.ACLR
+clr => Q[25]$latch.ACLR
+clr => Q[26]$latch.ACLR
+clr => Q[27]$latch.ACLR
+clr => Q[28]$latch.ACLR
+clr => Q[29]$latch.ACLR
+clr => Q[30]$latch.ACLR
+clr => Q[31]$latch.ACLR
+e => Q[0]$latch.LATCH_ENABLE
+e => Q[1]$latch.LATCH_ENABLE
+e => Q[2]$latch.LATCH_ENABLE
+e => Q[3]$latch.LATCH_ENABLE
+e => Q[4]$latch.LATCH_ENABLE
+e => Q[5]$latch.LATCH_ENABLE
+e => Q[6]$latch.LATCH_ENABLE
+e => Q[7]$latch.LATCH_ENABLE
+e => Q[8]$latch.LATCH_ENABLE
+e => Q[9]$latch.LATCH_ENABLE
+e => Q[10]$latch.LATCH_ENABLE
+e => Q[11]$latch.LATCH_ENABLE
+e => Q[12]$latch.LATCH_ENABLE
+e => Q[13]$latch.LATCH_ENABLE
+e => Q[14]$latch.LATCH_ENABLE
+e => Q[15]$latch.LATCH_ENABLE
+e => Q[16]$latch.LATCH_ENABLE
+e => Q[17]$latch.LATCH_ENABLE
+e => Q[18]$latch.LATCH_ENABLE
+e => Q[19]$latch.LATCH_ENABLE
+e => Q[20]$latch.LATCH_ENABLE
+e => Q[21]$latch.LATCH_ENABLE
+e => Q[22]$latch.LATCH_ENABLE
+e => Q[23]$latch.LATCH_ENABLE
+e => Q[24]$latch.LATCH_ENABLE
+e => Q[25]$latch.LATCH_ENABLE
+e => Q[26]$latch.LATCH_ENABLE
+e => Q[27]$latch.LATCH_ENABLE
+e => Q[28]$latch.LATCH_ENABLE
+e => Q[29]$latch.LATCH_ENABLE
+e => Q[30]$latch.LATCH_ENABLE
+e => Q[31]$latch.LATCH_ENABLE
+
+
+|Datapath2|Reg32:OutPort
+D[0] => Q[0]$latch.DATAIN
+D[1] => Q[1]$latch.DATAIN
+D[2] => Q[2]$latch.DATAIN
+D[3] => Q[3]$latch.DATAIN
+D[4] => Q[4]$latch.DATAIN
+D[5] => Q[5]$latch.DATAIN
+D[6] => Q[6]$latch.DATAIN
+D[7] => Q[7]$latch.DATAIN
+D[8] => Q[8]$latch.DATAIN
+D[9] => Q[9]$latch.DATAIN
+D[10] => Q[10]$latch.DATAIN
+D[11] => Q[11]$latch.DATAIN
+D[12] => Q[12]$latch.DATAIN
+D[13] => Q[13]$latch.DATAIN
+D[14] => Q[14]$latch.DATAIN
+D[15] => Q[15]$latch.DATAIN
+D[16] => Q[16]$latch.DATAIN
+D[17] => Q[17]$latch.DATAIN
+D[18] => Q[18]$latch.DATAIN
+D[19] => Q[19]$latch.DATAIN
+D[20] => Q[20]$latch.DATAIN
+D[21] => Q[21]$latch.DATAIN
+D[22] => Q[22]$latch.DATAIN
+D[23] => Q[23]$latch.DATAIN
+D[24] => Q[24]$latch.DATAIN
+D[25] => Q[25]$latch.DATAIN
+D[26] => Q[26]$latch.DATAIN
+D[27] => Q[27]$latch.DATAIN
+D[28] => Q[28]$latch.DATAIN
+D[29] => Q[29]$latch.DATAIN
+D[30] => Q[30]$latch.DATAIN
+D[31] => Q[31]$latch.DATAIN
+Q[0] <= Q[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[16] <= Q[16]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[17] <= Q[17]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[18] <= Q[18]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[19] <= Q[19]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[20] <= Q[20]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[21] <= Q[21]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[22] <= Q[22]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[23] <= Q[23]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[24] <= Q[24]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[25] <= Q[25]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[26] <= Q[26]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[27] <= Q[27]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[28] <= Q[28]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[29] <= Q[29]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[30] <= Q[30]$latch.DB_MAX_OUTPUT_PORT_TYPE
+Q[31] <= Q[31]$latch.DB_MAX_OUTPUT_PORT_TYPE
+clk => ~NO_FANOUT~
+clr => Q[0]$latch.ACLR
+clr => Q[1]$latch.ACLR
+clr => Q[2]$latch.ACLR
+clr => Q[3]$latch.ACLR
+clr => Q[4]$latch.ACLR
+clr => Q[5]$latch.ACLR
+clr => Q[6]$latch.ACLR
+clr => Q[7]$latch.ACLR
+clr => Q[8]$latch.ACLR
+clr => Q[9]$latch.ACLR
+clr => Q[10]$latch.ACLR
+clr => Q[11]$latch.ACLR
+clr => Q[12]$latch.ACLR
+clr => Q[13]$latch.ACLR
+clr => Q[14]$latch.ACLR
+clr => Q[15]$latch.ACLR
+clr => Q[16]$latch.ACLR
+clr => Q[17]$latch.ACLR
+clr => Q[18]$latch.ACLR
+clr => Q[19]$latch.ACLR
+clr => Q[20]$latch.ACLR
+clr => Q[21]$latch.ACLR
+clr => Q[22]$latch.ACLR
+clr => Q[23]$latch.ACLR
+clr => Q[24]$latch.ACLR
+clr => Q[25]$latch.ACLR
+clr => Q[26]$latch.ACLR
+clr => Q[27]$latch.ACLR
+clr => Q[28]$latch.ACLR
+clr => Q[29]$latch.ACLR
+clr => Q[30]$latch.ACLR
+clr => Q[31]$latch.ACLR
+e => Q[0]$latch.LATCH_ENABLE
+e => Q[1]$latch.LATCH_ENABLE
+e => Q[2]$latch.LATCH_ENABLE
+e => Q[3]$latch.LATCH_ENABLE
+e => Q[4]$latch.LATCH_ENABLE
+e => Q[5]$latch.LATCH_ENABLE
+e => Q[6]$latch.LATCH_ENABLE
+e => Q[7]$latch.LATCH_ENABLE
+e => Q[8]$latch.LATCH_ENABLE
+e => Q[9]$latch.LATCH_ENABLE
+e => Q[10]$latch.LATCH_ENABLE
+e => Q[11]$latch.LATCH_ENABLE
+e => Q[12]$latch.LATCH_ENABLE
+e => Q[13]$latch.LATCH_ENABLE
+e => Q[14]$latch.LATCH_ENABLE
+e => Q[15]$latch.LATCH_ENABLE
+e => Q[16]$latch.LATCH_ENABLE
+e => Q[17]$latch.LATCH_ENABLE
+e => Q[18]$latch.LATCH_ENABLE
+e => Q[19]$latch.LATCH_ENABLE
+e => Q[20]$latch.LATCH_ENABLE
+e => Q[21]$latch.LATCH_ENABLE
+e => Q[22]$latch.LATCH_ENABLE
+e => Q[23]$latch.LATCH_ENABLE
+e => Q[24]$latch.LATCH_ENABLE
+e => Q[25]$latch.LATCH_ENABLE
+e => Q[26]$latch.LATCH_ENABLE
+e => Q[27]$latch.LATCH_ENABLE
+e => Q[28]$latch.LATCH_ENABLE
+e => Q[29]$latch.LATCH_ENABLE
+e => Q[30]$latch.LATCH_ENABLE
+e => Q[31]$latch.LATCH_ENABLE
 
 
