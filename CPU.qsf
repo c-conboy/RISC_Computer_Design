@@ -208,3 +208,4 @@ set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id st1_datapath
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id st1_datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME st1_datapath_tb -section_id st1_datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE st1_datapath_tb.v -section_id st1_datapath_tb
+set_global_assignment -name VERILOG_FILE jr1_datapath_tb.v

@@ -10,158 +10,158 @@
 # ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Reg32
 # 
 # Top level modules:
 # 	Reg32
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Reg64.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg64.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Reg64
 # 
 # Top level modules:
 # 	Reg64
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/bus_encoder.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/bus_encoder.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module bus_encoder
 # 
 # Top level modules:
 # 	bus_encoder
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/and_or.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/and_or.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module and_or
 # 
 # Top level modules:
 # 	and_or
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Add_half.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_half.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Add_half
 # 
 # Top level modules:
 # 	Add_half
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Add_full.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_full.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Add_full
 # 
 # Top level modules:
 # 	Add_full
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_4.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_4.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Add_rca_4
 # 
 # Top level modules:
 # 	Add_rca_4
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_16.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_16.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Add_rca_16
 # 
 # Top level modules:
 # 	Add_rca_16
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_32.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_32.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Add_rca_32
 # 
 # Top level modules:
 # 	Add_rca_32
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/negate.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/negate.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module negate
 # 
 # Top level modules:
 # 	negate
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Sub_rca_32.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Sub_rca_32.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Sub_rca_32
 # 
 # Top level modules:
 # 	Sub_rca_32
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/shift_right.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/shift_right.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module shift_right
 # 
 # Top level modules:
 # 	shift_right
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/shift_left.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/shift_left.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module shift_left
 # 
 # Top level modules:
 # 	shift_left
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/ror.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/ror.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ror
 # 
 # Top level modules:
 # 	ror
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/rol.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/rol.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module rol
 # 
 # Top level modules:
 # 	rol
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/shra.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/shra.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module shra
 # 
 # Top level modules:
 # 	shra
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/mult.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/mult.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mult
 # 
 # Top level modules:
 # 	mult
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/div.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/div.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module div
 # 
 # Top level modules:
 # 	div
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/MdMuxVHDL.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/MdMuxVHDL.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module MdMultiplexer
 # 
 # Top level modules:
 # 	MdMultiplexer
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/bus_muxVHDL.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/bus_muxVHDL.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module bus_multiplexer
 # 
 # Top level modules:
 # 	bus_multiplexer
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/RAM.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/RAM.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module RAM
 # 
 # Top level modules:
 # 	RAM
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Datapath2
 # 
 # Top level modules:
 # 	Datapath2
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/SelectEncodeLogic.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/SelectEncodeLogic.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module SelectEncodeLogic
 # 
 # Top level modules:
 # 	SelectEncodeLogic
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/CONFF.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/CONFF.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module CONFF
 # 
 # Top level modules:
 # 	CONFF
 # 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module st1_datapath_tb
 # 
@@ -196,29 +196,29 @@
 # Loading work.bus_multiplexer
 # Loading work.RAM
 # Loading work.CONFF
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
 # 
 #         Region: /st1_datapath_tb/DUT
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
 # 
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /st1_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
 # 
 #         Region: /st1_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(101): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(101): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
 # 
 #         Region: /st1_datapath_tb/DUT/InPort
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(102): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(102): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
 # 
 #         Region: /st1_datapath_tb/DUT/OutPort
 # 
@@ -228,30 +228,34 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 500 ns
-restart -f
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
+add wave -position insertpoint  \
+sim:/st1_datapath_tb/DUT/R2/Q
+add wave -position insertpoint  \
+sim:/st1_datapath_tb/DUT/PC/Q
+restart
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
 # 
 #         Region: /st1_datapath_tb/DUT
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
 # 
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /st1_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
 # 
 #         Region: /st1_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(101): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(101): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
 # 
 #         Region: /st1_datapath_tb/DUT/InPort
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(102): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(102): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
 # 
 #         Region: /st1_datapath_tb/DUT/OutPort
 run 500ns
@@ -263,158 +267,158 @@ do CPU_run_msim_rtl_verilog.do
 # vmap work rtl_work
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Reg32
 # 
 # Top level modules:
 # 	Reg32
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Reg64.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg64.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Reg64
 # 
 # Top level modules:
 # 	Reg64
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/bus_encoder.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/bus_encoder.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module bus_encoder
 # 
 # Top level modules:
 # 	bus_encoder
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/and_or.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/and_or.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module and_or
 # 
 # Top level modules:
 # 	and_or
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/ALU.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Add_half.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_half.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Add_half
 # 
 # Top level modules:
 # 	Add_half
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Add_full.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_full.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Add_full
 # 
 # Top level modules:
 # 	Add_full
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_4.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_4.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Add_rca_4
 # 
 # Top level modules:
 # 	Add_rca_4
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_16.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_16.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Add_rca_16
 # 
 # Top level modules:
 # 	Add_rca_16
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Add_rca_32.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_32.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Add_rca_32
 # 
 # Top level modules:
 # 	Add_rca_32
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/negate.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/negate.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module negate
 # 
 # Top level modules:
 # 	negate
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Sub_rca_32.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Sub_rca_32.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Sub_rca_32
 # 
 # Top level modules:
 # 	Sub_rca_32
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/shift_right.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/shift_right.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module shift_right
 # 
 # Top level modules:
 # 	shift_right
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/shift_left.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/shift_left.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module shift_left
 # 
 # Top level modules:
 # 	shift_left
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/ror.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/ror.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ror
 # 
 # Top level modules:
 # 	ror
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/rol.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/rol.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module rol
 # 
 # Top level modules:
 # 	rol
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/shra.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/shra.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module shra
 # 
 # Top level modules:
 # 	shra
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/mult.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/mult.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module mult
 # 
 # Top level modules:
 # 	mult
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/div.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/div.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module div
 # 
 # Top level modules:
 # 	div
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/MdMuxVHDL.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/MdMuxVHDL.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module MdMultiplexer
 # 
 # Top level modules:
 # 	MdMultiplexer
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/bus_muxVHDL.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/bus_muxVHDL.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module bus_multiplexer
 # 
 # Top level modules:
 # 	bus_multiplexer
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/RAM.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/RAM.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module RAM
 # 
 # Top level modules:
 # 	RAM
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Datapath2
 # 
 # Top level modules:
 # 	Datapath2
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/SelectEncodeLogic.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/SelectEncodeLogic.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module SelectEncodeLogic
 # 
 # Top level modules:
 # 	SelectEncodeLogic
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/CONFF.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/CONFF.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module CONFF
 # 
 # Top level modules:
 # 	CONFF
 # 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module st1_datapath_tb
 # 
@@ -449,29 +453,29 @@ do CPU_run_msim_rtl_verilog.do
 # Loading work.bus_multiplexer
 # Loading work.RAM
 # Loading work.CONFF
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
 # 
 #         Region: /st1_datapath_tb/DUT
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
 # 
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /st1_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
 # 
 #         Region: /st1_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(101): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(101): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
 # 
 #         Region: /st1_datapath_tb/DUT/InPort
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(102): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(102): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
 # 
 #         Region: /st1_datapath_tb/DUT/OutPort
 # 
@@ -481,3 +485,294 @@ do CPU_run_msim_rtl_verilog.do
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 500 ns
+add wave -position insertpoint  \
+sim:/st1_datapath_tb/DUT/R2/Q
+add wave -position insertpoint  \
+sim:/st1_datapath_tb/DUT/PC/Q
+restart
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
+# 
+#         Region: /st1_datapath_tb/DUT
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
+# 
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(101): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/InPort
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(102): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/OutPort
+run 500ns
+add wave -position insertpoint  \
+sim:/st1_datapath_tb/DUT/R4/Q
+do CPU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Reg32
+# 
+# Top level modules:
+# 	Reg32
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg64.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Reg64
+# 
+# Top level modules:
+# 	Reg64
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/bus_encoder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bus_encoder
+# 
+# Top level modules:
+# 	bus_encoder
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/and_or.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module and_or
+# 
+# Top level modules:
+# 	and_or
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_half.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Add_half
+# 
+# Top level modules:
+# 	Add_half
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_full.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Add_full
+# 
+# Top level modules:
+# 	Add_full
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_4.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Add_rca_4
+# 
+# Top level modules:
+# 	Add_rca_4
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_16.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Add_rca_16
+# 
+# Top level modules:
+# 	Add_rca_16
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Add_rca_32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Add_rca_32
+# 
+# Top level modules:
+# 	Add_rca_32
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/negate.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module negate
+# 
+# Top level modules:
+# 	negate
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Sub_rca_32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Sub_rca_32
+# 
+# Top level modules:
+# 	Sub_rca_32
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/shift_right.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module shift_right
+# 
+# Top level modules:
+# 	shift_right
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/shift_left.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module shift_left
+# 
+# Top level modules:
+# 	shift_left
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/ror.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ror
+# 
+# Top level modules:
+# 	ror
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/rol.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module rol
+# 
+# Top level modules:
+# 	rol
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/shra.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module shra
+# 
+# Top level modules:
+# 	shra
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/mult.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mult
+# 
+# Top level modules:
+# 	mult
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/div.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module div
+# 
+# Top level modules:
+# 	div
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/MdMuxVHDL.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MdMultiplexer
+# 
+# Top level modules:
+# 	MdMultiplexer
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/bus_muxVHDL.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module bus_multiplexer
+# 
+# Top level modules:
+# 	bus_multiplexer
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/RAM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module RAM
+# 
+# Top level modules:
+# 	RAM
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Datapath2
+# 
+# Top level modules:
+# 	Datapath2
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/SelectEncodeLogic.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SelectEncodeLogic
+# 
+# Top level modules:
+# 	SelectEncodeLogic
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/CONFF.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module CONFF
+# 
+# Top level modules:
+# 	CONFF
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module st1_datapath_tb
+# 
+# Top level modules:
+# 	st1_datapath_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  st1_datapath_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps st1_datapath_tb 
+# Loading work.st1_datapath_tb
+# Loading work.Datapath2
+# Loading work.SelectEncodeLogic
+# Loading work.Reg32
+# Loading work.MdMultiplexer
+# Loading work.Reg64
+# Loading work.ALU
+# Loading work.and_or
+# Loading work.Add_rca_32
+# Loading work.Add_rca_16
+# Loading work.Add_rca_4
+# Loading work.Add_full
+# Loading work.Add_half
+# Loading work.Sub_rca_32
+# Loading work.negate
+# Loading work.shift_right
+# Loading work.shift_left
+# Loading work.ror
+# Loading work.rol
+# Loading work.shra
+# Loading work.mult
+# Loading work.div
+# Loading work.bus_encoder
+# Loading work.bus_multiplexer
+# Loading work.RAM
+# Loading work.CONFF
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
+# 
+#         Region: /st1_datapath_tb/DUT
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
+# 
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(101): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/InPort
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(102): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/OutPort
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 500 ns
+add wave -position insertpoint sim:/st1_datapath_tb/DUT/R4/*
+add wave -position insertpoint  \
+sim:/st1_datapath_tb/DUT/R2/Q
+add wave -position insertpoint  \
+sim:/st1_datapath_tb/DUT/PC/Q
+restart
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
+# 
+#         Region: /st1_datapath_tb/DUT
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/st1_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
+# 
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/CON
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(101): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/InPort
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(102): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /st1_datapath_tb/DUT/OutPort
+run 500ns
