@@ -1,6 +1,6 @@
 library verilog;
 use verilog.vl_types.all;
-entity ld_datapath_tb is
+entity st1_datapath_tb is
     generic(
         Default         : vl_logic_vector(0 to 3) := (Hi0, Hi0, Hi0, Hi0);
         Reg_load1a      : vl_logic_vector(0 to 3) := (Hi0, Hi0, Hi0, Hi1);
@@ -34,4 +34,4 @@ entity ld_datapath_tb is
     attribute mti_svvh_generic_type of T5 : constant is 1;
     attribute mti_svvh_generic_type of T6 : constant is 1;
     attribute mti_svvh_generic_type of T7 : constant is 1;
-end ld_datapath_tb;
+end st1_datapath_tb;
