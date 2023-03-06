@@ -66,7 +66,7 @@ always @(Present_state) // do the required job in each state
 			end
 			
 			Reg_load1b: begin//Put Insturction into MDR at Zero, then load to IR so that we can put something into R1 using Grb
-				manualBusInput <= 32'h9B000019;
+				manualBusInput <= 32'h9B180019;
 				#1 MDRin <= 1; Read <= 0; MBIout <= 1; Write = 1;
 				#2 MDRin <= 0; Read <= 0; MBIout <= 0; Write = 0;
 				#1 IRin <= 1; MDRout <=  1;
@@ -75,8 +75,8 @@ always @(Present_state) // do the required job in each state
 			
 			Reg_load2a: begin //Put address to be laoded to into MAR
 				manualBusInput <= 32'd74;
-				#1 MBIout <= 1; MARin <= 1; 
-				#5 MBIout <= 0; MARin <= 0; 
+				#1 MBIout <= 1; MARin <= 1;
+				#5 MBIout <= 0; MARin <= 0;
 			end
 			
 			Reg_load2b: begin //Put something into that mem address (9) @ [R1 + $45] = 74
@@ -86,7 +86,7 @@ always @(Present_state) // do the required job in each state
 			end
 			
 			Reg_load3a: begin//Load $0 onto R6
-				manualBusInput <= 32'h0;
+				manualBusInput <= -32'sd1;
 				#1 MBIout <= 1;  Rin <= 1; Gra <= 1; 
 				#2 MBIout <= 0; Rin <= 0; Gra <= 0;
 			end

@@ -11,7 +11,8 @@ module Datapath2 (
 		//output [31:0] R0otp, R1otp, R2otp, R3otp, R4otp, R5otp, R6otp, R7otp, R8otp, R9otp, R10otp, R11otp, R12otp, R13otp, R14otp, R15otp, HIotp, LOotp, IRotp, BusMuxOutotp, Zotp, MARotp
 		output ConOtp
 		);
-		 
+		
+		
 	//Make wires for all the wires (connections that arent inputs)
 	wire [31:0] BusMuxIn_R0, BusMuxIn_HI, BusMuxIn_LO, BusMuxIn_Zhigh, 
 	BusMuxIn_Zlow, BusMuxIn_PC, BusMuxIn_MDR, BusMuxIn_Port, BusMuxOut, 
@@ -95,13 +96,13 @@ module Datapath2 (
 	RAM RAM(Read, Write, MARotp[8:0], BusMuxIn_MDR);
 	
 	//Conditional Branch Logic
+	wire [31:0] ConRegOtp, ConRegInput;
 	CONFF CONFF(IRotp[20:19], BusMuxOut, ConRegInput);
-	Reg32 CON (ConOtp, ConRegInput, clk, clr, CONin); 
+	Reg32 CON (ConRegInput, ConRegOtp, clk, clr, CONin);
+	assign ConOtp = ConRegOtp[0];
 	
 	//INPUT OUTPUT PORTS
 	Reg32 InPort (Input, BusMuxIn_Port, clk, clr, StrobeEnable);
 	Reg32 OutPort (BusMuxOut, Output, clk, clr, OutPortIn);
 
-	
-	
 endmodule
