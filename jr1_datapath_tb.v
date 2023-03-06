@@ -1,4 +1,4 @@
-timescale 1ns/10ps
+`timescale 1ns/10ps
 module jr1_datapath_tb;
 	reg PCout, Zlowout, MDRout, MBIout; // add any other signals to see in your simulation
 	reg MARin, Zin, PCin, MDRin, IRin, Yin;
@@ -76,7 +76,7 @@ always @(Present_state) // do the required job in each state
 			end
 			
 			Reg_load3a: begin//Load $90 onto R2
-				manualBusInput <= 32'h67;
+				manualBusInput <= 32'd9;
 				#1 MBIout <= 1;  Rin <= 1; Gra <= 1; 
 				#2 MBIout <= 0; Rin <= 0; Gra <= 0;
 			end
@@ -110,4 +110,5 @@ always @(Present_state) // do the required job in each state
 				#2 Gra <= 0; Rout <= 0; PCin <= 0; 
 			end
 	endcase
+end
 endmodule

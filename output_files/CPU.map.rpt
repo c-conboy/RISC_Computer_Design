@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Sun Mar 05 20:15:12 2023
+Mon Mar 06 14:19:38 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -55,7 +55,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar 05 20:15:12 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 06 14:19:38 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CPU                                             ;
 ; Top-level Entity Name              ; Datapath2                                       ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 0                                               ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 65                                              ;
+; Total pins                         ; 66                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -223,11 +223,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 65    ;
+; I/O pins                                    ; 66    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 65    ;
+; Total fan-out                               ; 66    ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -237,7 +237,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |Datapath2                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 65   ; 0            ; |Datapath2          ; work         ;
+; |Datapath2                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 66   ; 0            ; |Datapath2          ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -396,7 +396,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Mar 05 20:15:07 2023
+    Info: Processing started: Mon Mar 06 14:19:36 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file reg32.v
@@ -478,14 +478,29 @@ Info (12021): Found 1 design units, including 1 entities, in source file conff.v
     Info (12023): Found entity 1: CONFF
 Info (12021): Found 1 design units, including 1 entities, in source file ld_datapath_tb.v
     Info (12023): Found entity 1: ld_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file ld1_datapath_tb.v
+    Info (12023): Found entity 1: ld1_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file ldi1_datapath_tb.v
+    Info (12023): Found entity 1: ldi1_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file ldi2_datapath_tb.v
+    Info (12023): Found entity 1: ldi2_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file st1_datapath_tb.v
+    Info (12023): Found entity 1: st1_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file jr1_datapath_tb.v
+    Info (12023): Found entity 1: jr1_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file jal1_datapath_tb.v
+    Info (12023): Found entity 1: jal1_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file st2_datapath_tb.v
+    Info (12023): Found entity 1: st2_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file brzr_datapath_tb.v
+    Info (12023): Found entity 1: brzr_datapath_tb
 Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(52): created implicit net for "IRotp"
-Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(84): created implicit net for "InPortOut"
-Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(97): created implicit net for "ConRegInput"
-Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(98): created implicit net for "ConOtp"
-Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(101): created implicit net for "Input"
-Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(101): created implicit net for "StrobeEnable"
-Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(102): created implicit net for "Output"
-Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(102): created implicit net for "OutPortIn"
+Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(85): created implicit net for "InPortOut"
+Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(98): created implicit net for "ConRegInput"
+Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(102): created implicit net for "Input"
+Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(102): created implicit net for "StrobeEnable"
+Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(103): created implicit net for "Output"
+Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(103): created implicit net for "OutPortIn"
 Warning (10236): Verilog HDL Implicit Net warning at CONFF.v(4): created implicit net for "izi"
 Warning (10236): Verilog HDL Implicit Net warning at CONFF.v(6): created implicit net for "nzi"
 Warning (10236): Verilog HDL Implicit Net warning at CONFF.v(8): created implicit net for "ipi"
@@ -496,22 +511,6 @@ Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(9):
 Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(11): variable "Grb" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(13): variable "Grc" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10270): Verilog HDL Case Statement warning at SelectEncodeLogic.v(17): incomplete case statement has no default case item
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(40): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(41): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(42): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(43): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(44): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(45): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(46): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(47): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(48): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(49): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(50): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(51): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(52): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(53): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(54): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at SelectEncodeLogic.v(55): variable "BAout" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10270): Verilog HDL Case Statement warning at SelectEncodeLogic.v(39): incomplete case statement has no default case item
 Warning (10240): Verilog HDL Always Construct warning at SelectEncodeLogic.v(8): inferring latch(es) for variable "Rselect", which holds its previous value in one or more paths through the always construct
 Warning (10240): Verilog HDL Always Construct warning at SelectEncodeLogic.v(8): inferring latch(es) for variable "R15in", which holds its previous value in one or more paths through the always construct
@@ -710,6 +709,8 @@ Info (12128): Elaborating entity "bus_multiplexer" for hierarchy "bus_multiplexe
 Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM"
 Info (12128): Elaborating entity "CONFF" for hierarchy "CONFF:CONFF"
 Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ConOtp" is stuck at GND
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/ELEC 374/CPUProject/output_files/CPU.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -779,14 +780,14 @@ Warning (21074): Design contains 65 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "BAout"
     Warning (15610): No output dependent on input pin "CONin"
     Warning (15610): No output dependent on input pin "OutportIn"
-Info (21057): Implemented 65 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 66 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 65 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 154 warnings
+    Info (21059): Implemented 1 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 139 warnings
     Info: Peak virtual memory: 4596 megabytes
-    Info: Processing ended: Sun Mar 05 20:15:12 2023
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Mon Mar 06 14:19:38 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+

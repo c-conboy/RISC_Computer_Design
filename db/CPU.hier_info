@@ -64,6 +64,7 @@ Rout => Rout.IN1
 BAout => BAout.IN1
 CONin => CONin.IN1
 OutportIn => ~NO_FANOUT~
+ConOtp <= Reg32:CON.port0
 
 
 |Datapath2|SelectEncodeLogic:SEL

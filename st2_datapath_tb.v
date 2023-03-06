@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module st1_datapath_tb;
+module st2_datapath_tb;
 	reg PCout, Zlowout, MDRout, MBIout; // add any other signals to see in your simulation
 	reg MARin, Zin, PCin, MDRin, IRin, Yin;
 	reg Read, Write;
@@ -65,7 +65,7 @@ always @(Present_state) // do the required job in each state
 			end
 			
 			Reg_load1b: begin//Put Insturction into MDR at Zero, then load to IR so that we can put something into R1 using Grb
-				manualBusInput <= 32'h12000090;
+				manualBusInput <= 32'h12200090;
 				#1 MDRin <= 1; Read <= 0; MBIout <= 1; Write = 1;
 				#2 MDRin <= 0; Read <= 0; MBIout <= 0; Write = 0;
 				#1 IRin <= 1; MDRout <=  1;
@@ -84,8 +84,8 @@ always @(Present_state) // do the required job in each state
 				#5 MDRin <= 0; Read <= 0; MBIout <= 0; Write = 0;
 			end
 			
-			Reg_load3a: begin//Load $0 onto R6
-				manualBusInput <= 32'h0;
+			Reg_load3a: begin//Load $67 onto R4
+				manualBusInput <= 32'h67;
 				#1 MBIout <= 1;  Rin <= 1; Gra <= 1; 
 				#2 MBIout <= 0; Rin <= 0; Gra <= 0;
 			end

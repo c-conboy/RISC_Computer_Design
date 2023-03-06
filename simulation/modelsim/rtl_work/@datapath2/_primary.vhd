@@ -31,6 +31,7 @@ entity Datapath2 is
         Rout            : in     vl_logic;
         BAout           : in     vl_logic;
         CONin           : in     vl_logic;
-        OutportIn       : in     vl_logic
+        OutportIn       : in     vl_logic;
+        ConOtp          : out    vl_logic
     );
 end Datapath2;

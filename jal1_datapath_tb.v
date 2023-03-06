@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module st1_datapath_tb;
+module jal1_datapath_tb;
 	reg PCout, Zlowout, MDRout, MBIout; // add any other signals to see in your simulation
 	reg MARin, Zin, PCin, MDRin, IRin, Yin;
 	reg Read, Write;
@@ -9,7 +9,7 @@ module st1_datapath_tb;
 	reg [31:0] manualBusInput; 
 	parameter 	Default = 4'b0000, Reg_load1a = 4'b0001, Reg_load1b = 4'b0010, Reg_load2a = 4'b0011,
 					Reg_load2b = 4'b0100, Reg_load3a = 4'b0101, Reg_load3b = 4'b0110, T0 = 4'b0111,
-					T1 = 4'b1000, T2 = 4'b1001, T3 = 4'b1010, T4 = 4'b1011, T5 = 4'b1100, T6 = 4'b1101, T7 = 4'b1110;
+					T1 = 4'b1000, T2 = 4'b1001, T3 = 4'b1010, T4 = 4'b1011;
 	reg [3:0] Present_state = Default;
 	
 	Datapath2 DUT(.clk(Clock), .clr(1'b0), .PCout(PCout), .Zlowout(Zlowout), .MDRout(MDRout), 
@@ -19,6 +19,7 @@ module st1_datapath_tb;
 	.BAout(BAout), .CONin(CONin), .OutportIn(OutportIn), .Cout(Cout)
 	);
 	// add test logic here
+	
 	initial
 		begin
 			Clock = 0;
@@ -27,8 +28,8 @@ module st1_datapath_tb;
 		
 always @(posedge Clock) // finite state machine; if clock rising-edge
  begin
-	case (Present_state)
-			Default : Present_state = Reg_load1a;
+	case(Present_state)
+		  Default : Present_state = Reg_load1a;
 			Reg_load1a : Present_state = Reg_load1b;
 			Reg_load1b : Present_state = Reg_load2a;
 			Reg_load2a : Present_state = Reg_load2b;
@@ -38,13 +39,9 @@ always @(posedge Clock) // finite state machine; if clock rising-edge
 			T0 : Present_state = T1;
 			T1 : Present_state = T2;
 			T2 : Present_state = T3;
-			T3 : Present_state = T4;
-			T4 : Present_state = T5;
-			T5 : Present_state = T6;
-			T6 : Present_state = T7;
-
-	endcase
- end
+			T3: Present_state = T4;
+	endcase 
+end
 
 always @(Present_state) // do the required job in each state
  begin
@@ -59,33 +56,27 @@ always @(Present_state) // do the required job in each state
 			end
 	
 			Reg_load1a: begin//Load Onto PC, putm into MAR 
-				manualBusInput <= 32'd0;
+				manualBusInput <= 32'd3;
 				#1 MBIout <= 1; PCin <= 1; MARin <= 1;
 				#5 MBIout <= 0; PCin <= 0; MARin <= 0;
 			end
 			
-			Reg_load1b: begin//Put Insturction into MDR at Zero, then load to IR so that we can put something into R1 using Grb
-				manualBusInput <= 32'h12000090;
+			Reg_load1b: begin//Put Insturction into MDR at Zero, then load to IR so that we can put something into R2 using Grb
+				manualBusInput <= 32'hA9000000;
 				#1 MDRin <= 1; Read <= 0; MBIout <= 1; Write = 1;
 				#2 MDRin <= 0; Read <= 0; MBIout <= 0; Write = 0;
 				#1 IRin <= 1; MDRout <=  1;
 				#2 IRin <= 0; MDRout <=  0;
 			end
 			
-			Reg_load2a: begin //Put address to be laoded to into MAR
-				manualBusInput <= 32'd74;
-				#1 MBIout <= 1; MARin <= 1; 
-				#5 MBIout <= 0; MARin <= 0; 
+			Reg_load2a: begin //Put address to be laoded to into MAR 
 			end
 			
 			Reg_load2b: begin //Put something into that mem address (9) @ [R1 + $45] = 74
-				manualBusInput <= 32'd9;
-				#1 MDRin <= 1; Read <= 0; MBIout <= 1; Write = 1;
-				#5 MDRin <= 0; Read <= 0; MBIout <= 0; Write = 0;
 			end
 			
-			Reg_load3a: begin//Load $0 onto R6
-				manualBusInput <= 32'h0;
+			Reg_load3a: begin//Load $90 onto R2
+				manualBusInput <= 32'd9;
 				#1 MBIout <= 1;  Rin <= 1; Gra <= 1; 
 				#2 MBIout <= 0; Rin <= 0; Gra <= 0;
 			end
@@ -114,29 +105,17 @@ always @(Present_state) // do the required job in each state
 				#2 IRin <= 0; MDRout <=  0;
 			end
 			
-			T3: begin//Load register b into Y, if B is R0, load zeroes 
-				#1 Grb <= 1; BAout <= 1; Yin <= 1; 
-				#2 Grb <= 0; BAout <= 0; Yin <= 0; 
+			T3: begin//Load register Ra into Y, then put Pc onto bus and add
+				#1 Gra<= 1; Rout <= 1; Yin <= 1; 
+				#2 Gra <= 0; Rout <= 0; Yin <= 0; 
+				#1 PCout <= 1; ALU_Control <= 2; Zin <= 1; 
+				#2 PCout <= 0; ALU_Control <= 0; Zin <= 0;
 			end
 			
-			T4: begin//Add C (Last bits of Instruction) t0 the contents of Y (Rb), 0 in this case
-				#1 Cout <= 1; ALU_Control <= 2; Zin <= 1; 
-				#2 Cout <= 0; Zin <= 0; 
+			T4: begin//Put Zout into PC
+				#2 Zlowout <= 1; PCin <= 1; 
+				#2 Zlowout <= 0; PCin <= 0;
 			end
-			
-			T5: begin//Set MAR to Z (Address to load from) 
-				#1 Zlowout <= 1; MARin <= 1; 
-				#2 Zlowout <= 0; MARin <= 0; 
-			end
-			
-			T6: begin//Putcontents of regb into MDR and write to mem 
-				#1 Gra <= 1; MDRin <= 1; Rout <= 1; Write <= 1; 
-				#2 Gra <= 0; MDRin <= 0; Rout <= 0; Write <= 0;
-			end
-			
-			T7: begin
-			end
-			
 	endcase
- end
-endmodule 
+end
+endmodule

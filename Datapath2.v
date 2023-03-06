@@ -6,9 +6,10 @@ module Datapath2 (
 		input MBIout,
 		input [31:0] manualBusInput,
 		input [4:0] OpCode,
-		input Gra, Grb, Grc, Rin, Rout, BAout, CONin, OutportIn
+		input Gra, Grb, Grc, Rin, Rout, BAout, CONin, OutportIn,
 		//OUTPUTS
 		//output [31:0] R0otp, R1otp, R2otp, R3otp, R4otp, R5otp, R6otp, R7otp, R8otp, R9otp, R10otp, R11otp, R12otp, R13otp, R14otp, R15otp, HIotp, LOotp, IRotp, BusMuxOutotp, Zotp, MARotp
+		output ConOtp
 		);
 		 
 	//Make wires for all the wires (connections that arent inputs)
@@ -95,7 +96,7 @@ module Datapath2 (
 	
 	//Conditional Branch Logic
 	CONFF CONFF(IRotp[20:19], BusMuxOut, ConRegInput);
-	Reg32 CON (ConOtp, ConRegInput, clk, clr, CONin);
+	Reg32 CON (ConOtp, ConRegInput, clk, clr, CONin); 
 	
 	//INPUT OUTPUT PORTS
 	Reg32 InPort (Input, BusMuxIn_Port, clk, clr, StrobeEnable);
