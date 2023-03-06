@@ -209,19 +209,16 @@
 # 
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
 # 
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(45): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /ld_datapath_tb/DUT/R0
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
 #         Region: /ld_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
 #         Region: /ld_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(99): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(101): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
 #         Region: /ld_datapath_tb/DUT/InPort
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(100): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(102): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
 #         Region: /ld_datapath_tb/DUT/OutPort
 # 
@@ -231,9 +228,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 500 ns
-add wave -position insertpoint sim:/ld_datapath_tb/DUT/R1/*
 add wave -position insertpoint  \
-sim:/ld_datapath_tb/DUT/R1/Q
+sim:/ld_datapath_tb/DUT/R0/Q
 restart -f
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
 # 
@@ -248,26 +244,20 @@ restart -f
 # 
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
 # 
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(45): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /ld_datapath_tb/DUT/R0
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
 #         Region: /ld_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
 #         Region: /ld_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(99): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(101): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
 #         Region: /ld_datapath_tb/DUT/InPort
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(100): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(102): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
 #         Region: /ld_datapath_tb/DUT/OutPort
 run 500ns
-add wave -position insertpoint  \
-{sim:/ld_datapath_tb/DUT/RAM/mem[117]}
-add wave -position insertpoint  \
-{sim:/ld_datapath_tb/DUT/RAM/mem[0]}
+add wave -position insertpoint sim:/ld_datapath_tb/DUT/MAR/*
 restart -f
 # ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
 # 
@@ -282,51 +272,16 @@ restart -f
 # 
 # ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
 # 
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(45): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /ld_datapath_tb/DUT/R0
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
 #         Region: /ld_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(98): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
 #         Region: /ld_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(99): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(101): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
 #         Region: /ld_datapath_tb/DUT/InPort
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(100): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /ld_datapath_tb/DUT/OutPort
-run 500ns
-add wave -position insertpoint  \
-sim:/ld_datapath_tb/DUT/IR/Q
-restart -f
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 30, found 25.
-# 
-#         Region: /ld_datapath_tb/DUT
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
-# 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
-# 
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(45): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /ld_datapath_tb/DUT/R0
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /ld_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(96): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /ld_datapath_tb/DUT/CON
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(99): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'D'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
-# 
-#         Region: /ld_datapath_tb/DUT/InPort
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(100): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(102): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
 # 
 #         Region: /ld_datapath_tb/DUT/OutPort
 run 500ns

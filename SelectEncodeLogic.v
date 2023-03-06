@@ -5,7 +5,7 @@ output reg R0out,R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, 
 	reg [4:0] Rselect;
 	
 	
-	always @ (IRotp or Rin or Rout)begin
+	always @ (IRotp or Rin or Rout or BAout)begin
 		if(Gra)
 			Rselect = IRotp[26:23];
 		if(Grb)

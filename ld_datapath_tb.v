@@ -64,32 +64,36 @@ always @(Present_state) // do the required job in each state
 				#5 MBIout <= 0; PCin <= 0; MARin <= 0;
 			end
 			
-			Reg_load1b: begin//Put Insturction into MDR at Zero
-				manualBusInput <= 32'h00800075;
+			Reg_load1b: begin//Put Insturction into MDR at Zero, then load to IR so that we can put something into R1 using Grb
+				manualBusInput <= 32'h00080045;
 				#1 MDRin <= 1; Read <= 0; MBIout <= 1; Write = 1;
-				#5 MDRin <= 0; Read <= 0; MBIout <= 0; Write = 0;
+				#2 MDRin <= 0; Read <= 0; MBIout <= 0; Write = 0;
+				#1 IRin <= 1; MDRout <=  1;
+				#2 IRin <= 0; MDRout <=  0;
 			end
 			
 			Reg_load2a: begin //Put address to be laoded to into MAR
-				manualBusInput <= 32'h75;
+				manualBusInput <= 32'd74;
 				#1 MBIout <= 1; MARin <= 1; 
 				#5 MBIout <= 0; MARin <= 0; 
 			end
 			
-			Reg_load2b: begin //Put something into that mem address
+			Reg_load2b: begin //Put something into that mem address (9) @ [R1 + $45] = 74
 				manualBusInput <= 32'd9;
 				#1 MDRin <= 1; Read <= 0; MBIout <= 1; Write = 1;
 				#5 MDRin <= 0; Read <= 0; MBIout <= 0; Write = 0;
 			end
 			
-			Reg_load3a: begin //REsassert MAR to undeifned to ensure legit test
-				manualBusInput <= 32'hz;
-				#1 MBIout <= 1; MARin <= 1;
-				#5 MBIout <= 0; MARin <= 0;
+			Reg_load3a: begin//Load 5 onto R1
+				manualBusInput <= 32'd5;
+				#1 MBIout <= 1;  Rin <= 1; Grb <= 1; 
+				#2 MBIout <= 0; Rin <= 0; Grb <= 0;
 			end
 			
-			Reg_load3b: begin //Load Zero onto PC
-				
+			Reg_load3b: begin//REsassert MAR and IR to undeifned to ensure legit test
+				manualBusInput <= 32'hz;
+				#1 MBIout <= 1; MARin <= 1; IRin <= 1; 
+				#5 MBIout <= 0; MARin <= 0; IRin <= 0;
 			end
 			
 			T0: begin //Load PC on MAR, Load PC+1 onto Z
@@ -98,8 +102,11 @@ always @(Present_state) // do the required job in each state
 			end
 			
 			T1: begin //Load Z(PC +1) onto PC, read instruction from Mem[PC] into MDR 
-				#1 Zlowout <= 1; PCin <= 1; Read <= 1; MDRin <= 1; 
-				#2 Zlowout <= 0; PCin <= 0; Read <= 0; MDRin <= 0; 
+				#2 Zlowout <= 1; PCin <= 1; 
+				#2 Zlowout <= 0; PCin <= 0;
+				#2 Read <= 1;
+				#2 MDRin <= 1; 
+				#2 Read <= 0; MDRin <= 0; 
 			end
 			
 			T2: begin//Load MDR (insturction in Hex) onto IR

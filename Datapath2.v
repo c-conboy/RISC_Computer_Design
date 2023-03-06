@@ -40,7 +40,7 @@ module Datapath2 (
 	C_sign_extended, R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, R8in, R9in, R10in, R11in, R12in, R13in, R14in, R15in,
 	R0out,R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out);
 	
-	
+	wire [31:0] R0otp; 
 	//Instantiate all the registers
 	Reg32 R0(BusMuxOut, R0otp, clk, clr, R0in);
 	assign BusMuxIn_R0 = !BAout & R0otp;
@@ -69,7 +69,9 @@ module Datapath2 (
 	Reg32 IR(BusMuxOut, IRotp, clk, clr, IRin);
 	
 	//Memory Registers
-	Reg32 MDR(MdMuxOutput, BusMuxIn_MDR, clk, clr, MDRin);
+	wire [31:0] MDRotp; 
+	Reg32 MDR(MdMuxOutput, MDRotp, clk, clr, MDRin);
+	assign BusMuxIn_MDR = Read?32'bzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz:MDRotp;
 	Reg32 MAR(MdMuxOutput, MARotp, clk, clr, MARin);
 	MdMultiplexer MMUX(BusMuxOut, BusMuxIn_MDR, Read, MdMuxOutput); 
 	
