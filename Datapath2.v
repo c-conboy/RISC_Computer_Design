@@ -6,7 +6,8 @@ module Datapath2 (
 		input MBIout,
 		input [31:0] manualBusInput,
 		input [4:0] OpCode,
-		input Gra, Grb, Grc, Rin, Rout, BAout, CONin, OutportIn,
+		input Gra, Grb, Grc, Rin, Rout, BAout, CONin, OutportIn, InPortOut, StrobeEnable,
+		input [31:0] Input,
 		//OUTPUTS
 		//output [31:0] R0otp, R1otp, R2otp, R3otp, R4otp, R5otp, R6otp, R7otp, R8otp, R9otp, R10otp, R11otp, R12otp, R13otp, R14otp, R15otp, HIotp, LOotp, IRotp, BusMuxOutotp, Zotp, MARotp
 		output ConOtp
@@ -103,6 +104,6 @@ module Datapath2 (
 	
 	//INPUT OUTPUT PORTS
 	Reg32 InPort (Input, BusMuxIn_Port, clk, clr, StrobeEnable);
-	Reg32 OutPort (BusMuxOut, Output, clk, clr, OutPortIn);
+	Reg32 OutPort (BusMuxOut, Output, clk, clr, OutportIn);
 
 endmodule

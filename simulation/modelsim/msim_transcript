@@ -161,12 +161,91 @@
 # Top level modules:
 # 	CONFF
 # 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/mfhi_datapath_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module mfhi_datapath_tb
-# ** Error: C:/altera/13.0sp1/ELEC 374/CPUProject/mfhi_datapath_tb.v(19): near ".": syntax error, unexpected '.', expecting ')'
-# ** Error: C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./CPU_run_msim_rtl_verilog.do line 34
-# C:/altera/13.0sp1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/ELEC\ 374/CPUProject {C:/altera/13.0sp1/ELEC 374/CPUProject/mfhi_datapath_tb.v}"
+# -- Compiling module mflo_datapath_tb
+# 
+# Top level modules:
+# 	mflo_datapath_tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  mflo_datapath_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps mflo_datapath_tb 
+# Loading work.mflo_datapath_tb
+# Loading work.Datapath2
+# Loading work.SelectEncodeLogic
+# Loading work.Reg32
+# Loading work.MdMultiplexer
+# Loading work.Reg64
+# Loading work.ALU
+# Loading work.and_or
+# Loading work.Add_rca_32
+# Loading work.Add_rca_16
+# Loading work.Add_rca_4
+# Loading work.Add_full
+# Loading work.Add_half
+# Loading work.Sub_rca_32
+# Loading work.negate
+# Loading work.shift_right
+# Loading work.shift_left
+# Loading work.ror
+# Loading work.rol
+# Loading work.shra
+# Loading work.mult
+# Loading work.div
+# Loading work.bus_encoder
+# Loading work.bus_multiplexer
+# Loading work.RAM
+# Loading work.CONFF
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 34, found 27.
+# 
+#         Region: /mflo_datapath_tb/DUT
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'InPortOut'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'StrobeEnable'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Input'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'ConOtp'.
+# 
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(107): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# 
+#         Region: /mflo_datapath_tb/DUT/OutPort
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 500 ns
+add wave -position insertpoint  \
+sim:/mflo_datapath_tb/DUT/R6/Q
+add wave -position insertpoint  \
+sim:/mflo_datapath_tb/DUT/LO/Q
+restart -f
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 34, found 27.
+# 
+#         Region: /mflo_datapath_tb/DUT
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'InPortOut'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'StrobeEnable'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Input'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/ELEC 374/CPUProject/mflo_datapath_tb.v(20): [TFMPC] - Missing connection for port 'ConOtp'.
+# 
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/ELEC 374/CPUProject/Datapath2.v(107): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/ELEC 374/CPUProject/Reg32.v(1).
+# 
+#         Region: /mflo_datapath_tb/DUT/OutPort
+run 500ns

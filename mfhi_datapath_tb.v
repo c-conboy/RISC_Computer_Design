@@ -2,7 +2,7 @@
 module mfhi_datapath_tb;
 	reg PCout, Zlowout, MDRout, MBIout; // add any other signals to see in your simulation
 	reg MARin, Zin, PCin, MDRin, IRin, Yin;
-	reg Read, Write, HIin, HIout, LOin, LOout;
+	reg Read, Write, HIin, HIout;
 	reg Gra, Grb, Grc, Rin, Rout, BAout, CONin, OutportIn, Cout;
 	reg [4:0] ALU_Control;
 	reg Clock;
@@ -16,7 +16,7 @@ module mfhi_datapath_tb;
 	.MARin(MARin), .Zin(Zin), .PCin(PCin), .MDRin(MDRin), .IRin(IRin), .Yin(Yin), .Read(Read), .Write(Write),
 	.OpCode(ALU_Control), .manualBusInput(manualBusInput),
 	.MBIout(MBIout),  .Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rout), 
-	.BAout(BAout), .CONin(CONin), .OutportIn(OutportIn), .Cout(Cout), .HIin(HIin), .HIout(HIout), .LOin(LOin), .LOout(LOout)
+	.BAout(BAout), .CONin(CONin), .OutportIn(OutportIn), .Cout(Cout), .HIin(HIin), .HIout(HIout)
 	);
 	// add test logic here
 	
@@ -50,8 +50,8 @@ always @(Present_state) // do the required job in each state
 				PCout <= 0; Zlowout <= 0; MDRout <= 0; // initialize the signals
 				MARin <= 0; Zin <= 0; Gra <= 0; Grb <= 0; Grc <= 0;
 				BAout <= 0; CONin <= 0; OutportIn <= 0; Cout <= 0;
-				PCin <=0; MDRin <= 0; IRin <= 0; Yin <= 0;
-				Read <= 0; ALU_Control <= 0; MBIout <= 0; HIin <= 0; HIout <= 0; LOin <= 0; LOout <= 0;
+				PCin <=0; MDRin <= 0; IRin <= 0; Yin <= 0; HIin <= 0; 
+				Read <= 0; ALU_Control <= 0; MBIout <= 0; HIout <= 0; 
 				Rin <= 0; Rout <= 0; manualBusInput <= 32'h00000000; Write <= 0; 
 			end
 	
@@ -77,8 +77,8 @@ always @(Present_state) // do the required job in each state
 			
 			Reg_load3a: begin//Load 9 onto HI
 				manualBusInput <= 32'd9;
-				#1 MBIout <= 1;  HIin <= 1;  
-				#2 MBIout <= 0; HIin <= 0; 
+				#1 MBIout <= 1;  HIin <= 1;
+				#2 MBIout <= 0; HIin <= 0;
 			end
 			
 			Reg_load3b: begin//REsassert MAR and IR to undeifned to ensure legit test
@@ -105,7 +105,7 @@ always @(Present_state) // do the required job in each state
 				#2 IRin <= 0; MDRout <=  0;
 			end
 			
-			T3: begin//Load register R into PCin, if R is R0, load zeroes 
+			T3: begin 
 				#1 Gra<= 1; Rin <= 1; HIout <= 1; 
 				#2 Gra <= 0; Rin <= 0; HIout <= 0; 
 			end

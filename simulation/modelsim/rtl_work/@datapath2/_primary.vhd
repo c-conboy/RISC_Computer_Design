@@ -32,6 +32,9 @@ entity Datapath2 is
         BAout           : in     vl_logic;
         CONin           : in     vl_logic;
         OutportIn       : in     vl_logic;
+        InPortOut       : in     vl_logic;
+        StrobeEnable    : in     vl_logic;
+        Input           : in     vl_logic_vector(31 downto 0);
         ConOtp          : out    vl_logic
     );
 end Datapath2;
