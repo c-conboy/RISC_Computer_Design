@@ -161,16 +161,16 @@
 # Top level modules:
 # 	CONFF
 # 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/ld_datapath_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/RISC_Computer_Design {C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module ld_datapath_tb
+# -- Compiling module addi_datapath_tb
 # 
 # Top level modules:
-# 	ld_datapath_tb
+# 	addi_datapath_tb
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  ld_datapath_tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps ld_datapath_tb 
-# Loading work.ld_datapath_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  addi_datapath_tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps addi_datapath_tb 
+# Loading work.addi_datapath_tb
 # Loading work.Datapath2
 # Loading work.SelectEncodeLogic
 # Loading work.Reg32
@@ -196,30 +196,30 @@
 # Loading work.bus_multiplexer
 # Loading work.RAM
 # Loading work.CONFF
-# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374/RISC_Computer_Design/ld_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 34, found 25.
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 34, found 25.
 # 
-#         Region: /ld_datapath_tb/DUT
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
+#         Region: /addi_datapath_tb/DUT
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'InPortOut'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'InPortOut'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'StrobeEnable'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'StrobeEnable'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Input'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Input'.
 # 
-# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/ld_datapath_tb.v(20): [TFMPC] - Missing connection for port 'ConOtp'.
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'ConOtp'.
 # 
 # ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(107): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
 # 
-#         Region: /ld_datapath_tb/DUT/OutPort
+#         Region: /addi_datapath_tb/DUT/OutPort
 # 
 # add wave *
 # view structure
@@ -227,3 +227,32 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 500 ns
+add wave -position insertpoint sim:/addi_datapath_tb/DUT/R2/*
+add wave -position insertpoint  \
+sim:/addi_datapath_tb/DUT/R3/Q
+restart
+# ** Warning: (vsim-3017) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Too few port connections. Expected 34, found 25.
+# 
+#         Region: /addi_datapath_tb/DUT
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIin'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'HIout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOin'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'LOout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Zhighout'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'InPortOut'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'StrobeEnable'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'Input'.
+# 
+# ** Warning: (vsim-3722) C:/altera/13.0sp1/elec374/RISC_Computer_Design/addi_datapath_tb.v(20): [TFMPC] - Missing connection for port 'ConOtp'.
+# 
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/RISC_Computer_Design/Datapath2.v(107): [PCDPC] - Port size (32 or 32) does not match connection size (1) for port 'Q'. The port definition is at: C:/altera/13.0sp1/elec374/RISC_Computer_Design/Reg32.v(1).
+# 
+#         Region: /addi_datapath_tb/DUT/OutPort
+run 500ns
