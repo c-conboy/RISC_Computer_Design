@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Wed Mar 08 09:11:58 2023
+Sun Mar 19 16:19:56 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -55,7 +55,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 08 09:11:57 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 19 16:19:55 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; CPU                                             ;
 ; Top-level Entity Name              ; Datapath2                                       ;
@@ -736,7 +736,7 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:19     ;
+; Top            ; 00:01:32     ;
 +----------------+--------------+
 
 
@@ -746,9 +746,19 @@ Table restricted to first 100 entries. Note: All latches listed above may not be
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Mar 08 09:10:33 2023
+    Info: Processing started: Sun Mar 19 16:18:14 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file out_datapath_tb.v
+    Info (12023): Found entity 1: out_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file ori_datapath_tb.v
+    Info (12023): Found entity 1: ori_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file in_datapath_tb.v
+    Info (12023): Found entity 1: in_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file andi_datapath_tb.v
+    Info (12023): Found entity 1: andi_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file addi_datapath_tb.v
+    Info (12023): Found entity 1: addi_datapath_tb
 Info (12021): Found 1 design units, including 1 entities, in source file reg32.v
     Info (12023): Found entity 1: Reg32
 Warning (12019): Can't analyze file -- file Register32.v is missing
@@ -846,6 +856,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file brzr_da
     Info (12023): Found entity 1: brzr_datapath_tb
 Info (12021): Found 1 design units, including 1 entities, in source file brnz_datapath_tb.v
     Info (12023): Found entity 1: brnz_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file mfhi_datapath_tb.v
+    Info (12023): Found entity 1: mfhi_datapath_tb
+Info (12021): Found 1 design units, including 1 entities, in source file mflo_datapath_tb.v
+    Info (12023): Found entity 1: mflo_datapath_tb
 Warning (10236): Verilog HDL Implicit Net warning at Datapath.v(52): created implicit net for "IRotp"
 Warning (10236): Verilog HDL Implicit Net warning at Datapath2.v(107): created implicit net for "Output"
 Info (12127): Elaborating entity "Datapath2" for the top level hierarchy
@@ -1130,16 +1144,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clk"
-    Warning (15610): No output dependent on input pin "OutPortIn"
+    Warning (15610): No output dependent on input pin "OutportIn"
 Info (21057): Implemented 39006 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 99 input pins
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 38906 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 105 warnings
-    Info: Peak virtual memory: 4739 megabytes
-    Info: Processing ended: Wed Mar 08 09:11:58 2023
-    Info: Elapsed time: 00:01:25
-    Info: Total CPU time (on all processors): 00:01:25
+    Info: Peak virtual memory: 4747 megabytes
+    Info: Processing ended: Sun Mar 19 16:19:56 2023
+    Info: Elapsed time: 00:01:42
+    Info: Total CPU time (on all processors): 00:01:39
 
 
 +------------------------------------------+
