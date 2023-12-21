@@ -1,7 +1,0 @@
-module MdMux (input [31:0] BusMuxOut, Mdatain, input Read, output MdMuxOutput);
-
-	case(Read):
-		0 : MdMuxOutput = BusMuxOut;
-		default : MdMuxOutput = Mdatain;
-	endcase
-endmodule

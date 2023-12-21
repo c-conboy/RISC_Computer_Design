@@ -1,6 +1,0 @@
-module bus_multiplexer(output reg [31:0] BusMuxOut, input[31:0]Data[23:0], input [4:0] Code);
-	always @(Code)
-		begin
-			BusMuxOut = Data[Code];
-		end
-endmodule
